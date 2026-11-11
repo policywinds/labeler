@@ -34,6 +34,16 @@ TOPICS: dict[str, list[str]] = {
     ],
 }
 
+# Direction axis per topic (docs/mvp.md, AI pipeline). Neutral wording: "expands" and "restricts" refer
+# to the axis below, not to either side's framing. Users pick which direction they want alerts on.
+DIRECTION_AXES: dict[str, str] = {
+    "firearms": "the ability to buy, own, carry or make firearms and accessories",
+    "transgender": "legal recognition of, and access to services and facilities for, transgender people",
+    "abortion": "legal access to abortion",
+    "immigration-enforcement": "the scope of immigration enforcement by state or local government",
+}
+assert DIRECTION_AXES.keys() == TOPICS.keys()
+
 
 def all_tags() -> list[str]:
     """Flat `topic/subtag` identifiers; a single enum guarantees valid topic-subtag pairs."""

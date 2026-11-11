@@ -2,7 +2,7 @@ from openai.lib._pydantic import to_strict_json_schema
 
 from lawtracker.llm.client import cost_usd
 from lawtracker.llm.schema import Classification
-from lawtracker.topics import TOPICS, all_tags
+from lawtracker.topics import DIRECTION_AXES, TOPICS, all_tags
 
 
 def _walk(node):
@@ -35,6 +35,15 @@ def test_tag_enum_covers_all_topics():
     tags = all_tags()
     assert len(tags) == sum(len(v) for v in TOPICS.values())
     assert {t.split("/")[0] for t in tags} == {"firearms", "transgender", "abortion", "immigration-enforcement"}
+
+
+def test_direction_is_a_required_enum_on_every_topic_hit():
+    schema = to_strict_json_schema(Classification)
+    hit = next(n for n in _walk(schema) if n.get("properties", {}).get("tag"))
+    assert "direction" in hit["required"]
+    values = next(n["enum"] for n in _walk(schema) if n.get("enum") and "expands" in n["enum"])
+    assert set(values) == {"expands", "restricts", "mixed", "neutral"}
+    assert DIRECTION_AXES.keys() == TOPICS.keys()
 
 
 def test_cost_counts_cached_and_reasoning_conservatively():
