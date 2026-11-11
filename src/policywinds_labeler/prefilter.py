@@ -6,10 +6,12 @@ import re
 
 from lawtracker.topics import KEYWORDS
 
-VERSION = 1
+VERSION = 2  # v2: Florida H/S numbering
 # Bills and joint resolutions (constitutional amendments). Simple/concurrent resolutions are mostly ceremonial.
 BILL_TYPES = re.compile(r"^(?:HB|SB|HJR|SJR|AB|ACA|SCA)\d+$")
 FEDERAL_TYPES = re.compile(r"^(?:HR|S|HJRES|SJRES)\d+$")  # federal HR is a bill; state HR is a resolution
+# States whose LegiScan numbering differs from the default (FL numbers bills and joint resolutions H1234/S1234).
+STATE_TYPES = {"US": FEDERAL_TYPES, "FL": re.compile(r"^[HS]\d+$")}
 _PATTERNS = {t: [re.compile(p, re.I) for p in ps] for t, ps in KEYWORDS.items()}
 
 
@@ -71,7 +73,7 @@ def run(db) -> dict:
     updates = []
     for r in rows:
         sc = score(f"{r['title']} {r.get('description') or ''}")
-        types = FEDERAL_TYPES if r["state"] == "US" else BILL_TYPES
+        types = STATE_TYPES.get(r["state"], BILL_TYPES)
         cand = bool(sc) and bool(types.match(r["number"]))
         updates.append({"id": r["id"], "c": cand, "p": sc or None, "v": VERSION})
     db.executemany("update bill set is_candidate = :c, prefilter = :p, prefilter_version = :v where id = :id", updates)
