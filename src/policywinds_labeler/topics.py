@@ -176,9 +176,11 @@ DIRECTION_GUIDE: dict[str, dict[str, str]] = {
     "transgender": {
         "expands": "more legal recognition of, or access for, transgender people (e.g. protecting gender-affirming "
         "care, allowing ID sex-marker changes, anti-discrimination protections, access to facilities or teams "
-        "matching gender identity)",
+        "matching gender identity, banning 'gender identity change efforts' / conversion therapy for minors)",
         "restricts": "less recognition or access (e.g. banning or limiting gender-affirming care, defining sex as "
-        "assigned at birth, sports or bathroom restrictions by birth sex, barring ID marker changes, pronoun limits)",
+        "assigned at birth, sports or bathroom restrictions by birth sex, barring ID marker changes, pronoun limits, "
+        "allowing or protecting therapy aimed at changing a minor's gender identity, parental-notification of "
+        "a student's gender identity)",
     },
     "abortion": {
         "expands": "more legal access to abortion (e.g. protecting the right, shield laws, coverage mandates, "
@@ -191,8 +193,9 @@ DIRECTION_GUIDE: dict[str, dict[str, str]] = {
         "or honoring detainers, banning sanctuary policies, state illegal-entry crimes, E-Verify mandates, "
         "border operations)",
         "restricts": "less immigration enforcement by state or local government (e.g. sanctuary or "
-        "limited-cooperation policies, limits on sharing data with ICE, protections at schools, courts or "
-        "hospitals, limits on detention contracts)",
+        "limited-cooperation policies, limits on sharing data with ICE, barring enforcement officers from "
+        "schools, courts or health facilities without a judicial warrant, limits on detention contracts, "
+        "repealing required ICE agreements)",
     },
 }
 assert DIRECTION_GUIDE.keys() == TOPICS.keys()

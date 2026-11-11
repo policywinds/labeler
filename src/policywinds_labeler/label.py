@@ -15,7 +15,7 @@ from concurrent.futures import ThreadPoolExecutor
 from lawtracker import config, prefilter
 from lawtracker.topics import DEFINITIONS, DIRECTION_AXES, DIRECTION_GUIDE, TOPICS
 
-PROMPT_VERSION = 3  # v3: axis_effect sentence before direction (v2 flipped "prohibits cooperation with ICE")
+PROMPT_VERSION = 4  # v4: explicit rule for bans of activities (v3 read a conversion-therapy ban as restricts)
 CONCURRENCY = 4
 
 
@@ -35,7 +35,13 @@ def system_prompt() -> str:
         "  First write axis_effect: in one sentence, say what changes in practice for the topic's outcome",
         "  (e.g. 'Bars agencies from sharing data with ICE, so less immigration enforcement' -> restricts;",
         "  'Requires background checks on private sales, so less gun access' -> restricts).",
-        "  Watch for negations: a bill that PROHIBITS or LIMITS an enforcement or restriction moves the opposite way.",
+        "  Rule for bills that ban, prohibit or limit something: first decide which way the banned ACTIVITY itself",
+        "  moves the topic's axis, then flip it. Banning a restriction EXPANDS; banning an expansion RESTRICTS.",
+        "  Examples: banning therapy that tries to change a minor's gender identity -> transgender EXPANDS;",
+        "  barring police from sharing data with ICE -> immigration-enforcement RESTRICTS;",
+        "  prohibiting cities from banning guns in parks -> firearms EXPANDS;",
+        "  prohibiting abortion after 6 weeks -> abortion RESTRICTS.",
+        "  Never choose 'restricts' just because the bill uses the word 'prohibit'; judge the effect on the axis.",
         "Judge only from the provided text. Use neutral language in the rationale.",
         "",
         "quote: copy one short passage (one sentence or clause, under 300 characters) EXACTLY as it appears in",
