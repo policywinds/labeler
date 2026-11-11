@@ -70,17 +70,27 @@ def user_message(bill: dict, text: str) -> str:
 
 
 _ws = re.compile(r"\s+")
+_line_no = re.compile(r"(?m)^\s*\d{1,3}(?=\s)")  # PDF/GovInfo line numbers at line starts
+_non_word = re.compile(r"[^0-9a-z]+")
+
+
+_small_num = re.compile(r"(?<!\S)\d{1,3}(?!\S)")
 
 
 def norm(s: str) -> str:
-    return _ws.sub(" ", s).strip().lower()
+    """Comparison form: lowercase letters and digits only. Punctuation, quote styles, hyphenation and
+    whitespace differences between the PDF/HTML text layer and the model's copy do not count, and standalone
+    1-3 digit numbers are dropped on both sides (PDF line numbers land mid-sentence)."""
+    return " ".join(_small_num.sub(" ", _non_word.sub(" ", s.lower())).split())
 
 
 def verify_quotes(topics: list[dict], full_text: str) -> list[dict]:
-    hay = norm(full_text)
+    """A quote passes if its words appear, in order and contiguous, in the bill text (ignoring line numbers,
+    punctuation and spacing). Requires at least 4 words so trivial fragments cannot pass."""
+    hay = " " + norm(_line_no.sub(" ", full_text)) + " "
     for t in topics:
         q = norm(t.get("quote") or "")
-        t["quote_ok"] = bool(q) and len(q) >= 12 and q in hay
+        t["quote_ok"] = len(q.split()) >= 4 and f" {q} " in hay
     return topics
 
 
