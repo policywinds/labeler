@@ -160,3 +160,39 @@ KEYWORDS: dict[str, list[str]] = {
     ],
 }
 assert KEYWORDS.keys() == TOPICS.keys()
+
+
+# Plain-language meaning of each direction, with examples. The axis alone was misread in v1
+# (a background-check mandate was labelled "expands" because it expands checks).
+DIRECTION_GUIDE: dict[str, dict[str, str]] = {
+    "firearms": {
+        "expands": "fewer restrictions on firearms or more ability to buy, own or carry them "
+        "(e.g. permitless or wider carry, lower age limits, preempting local gun rules, repealing a ban, "
+        "shielding gun owners or dealers from liability, tax breaks on firearm sales)",
+        "restricts": "more restrictions on firearms (e.g. new or wider background-check requirements, "
+        "higher age limits, waiting periods, bans on weapons, magazines or 3D-printed guns, red-flag orders, "
+        "storage mandates, carry bans in places, dealer reporting, removing guns from prohibited persons)",
+    },
+    "transgender": {
+        "expands": "more legal recognition of, or access for, transgender people (e.g. protecting gender-affirming "
+        "care, allowing ID sex-marker changes, anti-discrimination protections, access to facilities or teams "
+        "matching gender identity)",
+        "restricts": "less recognition or access (e.g. banning or limiting gender-affirming care, defining sex as "
+        "assigned at birth, sports or bathroom restrictions by birth sex, barring ID marker changes, pronoun limits)",
+    },
+    "abortion": {
+        "expands": "more legal access to abortion (e.g. protecting the right, shield laws, coverage mandates, "
+        "medication-abortion access, repealing restrictions)",
+        "restricts": "less legal access (e.g. bans or earlier limits, narrower exceptions, clinic regulations, "
+        "limits on medication abortion or travel, funding bans, fetal personhood)",
+    },
+    "immigration-enforcement": {
+        "expands": "more immigration enforcement by state or local government (e.g. requiring cooperation with ICE "
+        "or honoring detainers, banning sanctuary policies, state illegal-entry crimes, E-Verify mandates, "
+        "border operations)",
+        "restricts": "less immigration enforcement by state or local government (e.g. sanctuary or "
+        "limited-cooperation policies, limits on sharing data with ICE, protections at schools, courts or "
+        "hospitals, limits on detention contracts)",
+    },
+}
+assert DIRECTION_GUIDE.keys() == TOPICS.keys()

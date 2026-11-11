@@ -24,7 +24,12 @@ Tag = Enum("Tag", {t.replace("/", "__").replace("-", "_").upper(): t for t in al
 class TopicHit(BaseModel):
     model_config = ConfigDict(extra="forbid")
     tag: Tag = Field(description="topic/subtag")
-    direction: Direction = Field(description="Effect on the topic's direction axis, judged from the quoted provisions.")
+    axis_effect: str = Field(
+        max_length=300,
+        description="One sentence, written before choosing direction: does this make the topic's 'expands' "
+        "outcome or its 'restricts' outcome more likely in practice, and why.",
+    )
+    direction: Direction = Field(description="Effect on the topic's direction axis, consistent with axis_effect.")
     confidence: float = Field(ge=0, le=1)
     quote: str = Field(max_length=600, description="Verbatim excerpt from the provided bill text supporting this tag.")
     section_ref: str | None = Field(description="Section number/heading of the quote, or null if unknown.")

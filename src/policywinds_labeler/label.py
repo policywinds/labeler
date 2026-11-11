@@ -13,9 +13,9 @@ import threading
 from concurrent.futures import ThreadPoolExecutor
 
 from lawtracker import config, prefilter
-from lawtracker.topics import DEFINITIONS, DIRECTION_AXES, TOPICS
+from lawtracker.topics import DEFINITIONS, DIRECTION_AXES, DIRECTION_GUIDE, TOPICS
 
-PROMPT_VERSION = 1
+PROMPT_VERSION = 3  # v3: axis_effect sentence before direction (v2 flipped "prohibits cooperation with ICE")
 CONCURRENCY = 4
 
 
@@ -27,9 +27,15 @@ def system_prompt() -> str:
         "For each topic the bill substantively addresses, return one entry per distinct tag (topic/subtag).",
         "Return no entries and relevant=false if no provision substantively addresses any topic.",
         "",
-        "direction: the net effect of the bill's provisions for that tag on the topic's axis below:",
-        "  expands = moves the axis up; restricts = moves it down; mixed = clearly both;",
-        "  neutral = no change on the axis (study, reporting, ceremonial, funding-only, technical).",
+        "direction: the net effect of the bill's provisions for that tag, using the topic's own meaning of",
+        "  'expands' and 'restricts' below. Do not judge by whether the bill expands a program or a requirement:",
+        "  a bill that requires more background checks RESTRICTS firearms; a bill that bans sanctuary policies",
+        "  EXPANDS immigration enforcement. mixed = clearly both ways;",
+        "  neutral = no change either way (study, reporting, ceremonial, funding-only, technical).",
+        "  First write axis_effect: in one sentence, say what changes in practice for the topic's outcome",
+        "  (e.g. 'Bars agencies from sharing data with ICE, so less immigration enforcement' -> restricts;",
+        "  'Requires background checks on private sales, so less gun access' -> restricts).",
+        "  Watch for negations: a bill that PROHIBITS or LIMITS an enforcement or restriction moves the opposite way.",
         "Judge only from the provided text. Use neutral language in the rationale.",
         "",
         "quote: copy one short passage (one sentence or clause, under 300 characters) EXACTLY as it appears in",
@@ -41,6 +47,8 @@ def system_prompt() -> str:
         lines += [
             f"- {t}: {DEFINITIONS[t]}",
             f"  Axis: {DIRECTION_AXES[t]}.",
+            f"  expands = {DIRECTION_GUIDE[t]['expands']}.",
+            f"  restricts = {DIRECTION_GUIDE[t]['restricts']}.",
             f"  Subtags: {', '.join(subs)}.",
         ]
     return "\n".join(lines)
