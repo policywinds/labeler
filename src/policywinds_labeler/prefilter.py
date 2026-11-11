@@ -9,6 +9,7 @@ from lawtracker.topics import KEYWORDS
 VERSION = 1
 # Bills and joint resolutions (constitutional amendments). Simple/concurrent resolutions are mostly ceremonial.
 BILL_TYPES = re.compile(r"^(?:HB|SB|HJR|SJR|AB|ACA|SCA)\d+$")
+FEDERAL_TYPES = re.compile(r"^(?:HR|S|HJRES|SJRES)\d+$")  # federal HR is a bill; state HR is a resolution
 _PATTERNS = {t: [re.compile(p, re.I) for p in ps] for t, ps in KEYWORDS.items()}
 
 
@@ -61,7 +62,7 @@ def run(db) -> dict:
     """(Re)score bills whose prefilter_version is stale. Candidate = bill type matches and any topic scores."""
     rows = list(
         db.paged(
-            "select id, number, title, description from bill "
+            "select id, state, number, title, description from bill "
             "where (prefilter_version is distinct from :v) and id > :_after order by id limit :_limit",
             {"v": VERSION},
             page_size=1000,
@@ -70,7 +71,8 @@ def run(db) -> dict:
     updates = []
     for r in rows:
         sc = score(f"{r['title']} {r.get('description') or ''}")
-        cand = bool(sc) and bool(BILL_TYPES.match(r["number"]))
+        types = FEDERAL_TYPES if r["state"] == "US" else BILL_TYPES
+        cand = bool(sc) and bool(types.match(r["number"]))
         updates.append({"id": r["id"], "c": cand, "p": sc or None, "v": VERSION})
     db.executemany("update bill set is_candidate = :c, prefilter = :p, prefilter_version = :v where id = :id", updates)
     return {"scored": len(rows), "candidates": sum(u["c"] for u in updates)}
