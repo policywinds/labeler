@@ -36,6 +36,13 @@ TOPICS: dict[str, list[str]] = {
 
 # Direction axis per topic (docs/mvp.md, AI pipeline). Neutral wording: "expands" and "restricts" refer
 # to the axis below, not to either side's framing. Users pick which direction they want alerts on.
+# Short public URL segment per topic (/guns, /tx/guns). Topics without an entry use their tag. Must not be a
+# two-letter state code or a reserved site path (checked in tests).
+TOPIC_SLUG: dict[str, str] = {
+    "firearms": "guns",
+    "immigration-enforcement": "immigration",
+}
+
 DIRECTION_AXES: dict[str, str] = {
     "firearms": "the ability to buy, own, carry or make firearms and accessories",
     "transgender": "legal recognition of, and access to services and facilities for, transgender people",
