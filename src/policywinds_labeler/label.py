@@ -13,9 +13,11 @@ import threading
 from concurrent.futures import ThreadPoolExecutor
 
 from lawtracker import config, prefilter
-from lawtracker.topics import DEFINITIONS, DIRECTION_AXES, DIRECTION_GUIDE, TOPICS
+from lawtracker.topics import DEFINITIONS, DIRECTION_AXES, DIRECTION_GUIDE, REQUIRES_KEYWORD, TOPICS
 
-PROMPT_VERSION = 6  # v6: custody-support topic (only bills matching its keywords are relabelled; see PENDING)
+PROMPT_VERSION = (
+    7  # v7: custody-support scope (no child-welfare, prison visitation, divorce grounds), third parties, one direction
+)
 CONCURRENCY = 4
 
 
@@ -48,6 +50,22 @@ def system_prompt() -> str:
         "  rights (wrongful death, child support, tax status), gets abortion/personhood-ivf RESTRICTS, in addition",
         "  to any other topic it touches, even when it exempts the mother or doctors. 'Expands the definition'",
         "  of a person or child to include the unborn is still RESTRICTS for abortion.",
+        "custody-support: judge every subtag by the same measure, the paying or less-custodial parent's rights versus",
+        "  obligations. A presumption of joint or equal shared parenting, or faster enforcement of parenting time,",
+        "  EXPANDS on every subtag, even though it limits sole custody for the other parent. Give a custody-support",
+        "  subtag only when the bill changes custody, parenting time, support, paternity or alimony between parents",
+        "  or between a parent and a third party.",
+        "  Third parties: rights for grandparents, other relatives or nonparents to seek custody or visitation come",
+        "  at the expense of the parents, so judge them from the parent's side, never the third party's: making",
+        "  grandparent visitation easier -> custody-support RESTRICTS; making it harder for nonparents to win",
+        "  custody or access -> custody-support EXPANDS.",
+        "  Out of scope for custody-support (return no custody-support tag): child-welfare cases brought by the",
+        "  state (child-protective agency removals, foster care, state-filed termination of parental rights, and",
+        "  the lawyers, reports and procedures in those cases); visitation of prison or jail inmates; police",
+        "  training; divorce grounds or waiting periods with no custody, support or alimony change; tax credits.",
+        "  These stay out even when the inmate is a parent, and even when the bill protects parents from the",
+        "  child-protective agency: custody-support covers disputes between parents, or between a parent and a",
+        "  relative or other private party, not between a family and the state.",
         "  Never choose 'restricts' just because the bill uses the word 'prohibit'; judge the effect on the axis.",
         "Deleted and repealed law: text shown as [deleted: ...] is EXISTING law that the bill strikes out; the",
         "  bill does not enact it. Judge the change: removing a restriction moves the topic the opposite way from",
@@ -116,6 +134,12 @@ def verify_quotes(topics: list[dict], full_text: str) -> list[dict]:
     return topics
 
 
+def keyword_guard(topics: list[dict], matched) -> list[dict]:
+    """Drop tags of REQUIRES_KEYWORD topics the bill's keywords did not match (`matched`: prefilter topics)."""
+    matched = set(matched or ())
+    return [t for t in topics if t["tag"].split("/")[0] not in REQUIRES_KEYWORD or t["tag"].split("/")[0] in matched]
+
+
 def dedupe(topics: list[dict]) -> list[dict]:
     """Strict mode does not prevent repeated tags (seen in M0); keep the highest-confidence entry per tag."""
     best: dict[str, dict] = {}
@@ -128,7 +152,7 @@ def dedupe(topics: list[dict]) -> list[dict]:
 # Labels from FULL_RELABEL_VERSION on stay current for a bill unless its keywords match a topic added later
 # (TOPIC_ADDED): adding a topic relabels only the bills it can touch, not every bill.
 FULL_RELABEL_VERSION = 5
-TOPIC_ADDED = {"custody-support": 6}
+TOPIC_ADDED = {"custody-support": 7}  # v7 relabels the custody bills again (scope and rules fixed)
 _NEEDED = (
     "greatest(:base, "
     + ", ".join(f"case when b.prefilter -> '{tp}' is not null then {v} else 0 end" for tp, v in TOPIC_ADDED.items())
@@ -137,7 +161,7 @@ _NEEDED = (
 # Built only from the constants above (topic tags checked against TOPICS, integer versions); no user input.
 assert all(tp in TOPICS and isinstance(v, int) for tp, v in TOPIC_ADDED.items())
 PENDING = f"""
-select b.id, b.state, b.number, b.title, b.sponsors, t.doc_id, t.s3_key
+select b.id, b.state, b.number, b.title, b.sponsors, b.prefilter, t.doc_id, t.s3_key
 from bill b
 join legislative_session s on s.id = b.session_id
 join bill_text t on t.doc_id = (b.texts -> -1 ->> 'doc_id')::int and t.ok
@@ -218,7 +242,10 @@ def run(db, s3, bucket: str, *, time_left, budget_usd: float) -> dict:
         if not ok:
             bump(errors=1)
             return
-        topics = dedupe([h.model_dump(mode="json") for h in result.topics])
+        pf = b.get("prefilter")
+        while isinstance(pf, str):
+            pf = json.loads(pf)
+        topics = keyword_guard(dedupe([h.model_dump(mode="json") for h in result.topics]), pf)
         topics = verify_quotes(topics, text)
         quotes_ok = all(t["quote_ok"] for t in topics)
         db.execute(

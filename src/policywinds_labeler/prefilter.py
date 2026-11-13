@@ -4,9 +4,9 @@ from __future__ import annotations
 
 import re
 
-from lawtracker.topics import KEYWORDS
+from lawtracker.topics import KEYWORD_EXCLUDE, KEYWORDS
 
-VERSION = 4  # v2: Florida H/S numbering; v3: abortion keywords "conception", "conceived"; v4: custody-support
+VERSION = 5  # v2: FL H/S numbering; v3: "conception", "conceived"; v4: custody-support; v5: KEYWORD_EXCLUDE
 # Bills and joint resolutions (constitutional amendments). Simple/concurrent resolutions are mostly ceremonial.
 BILL_TYPES = re.compile(r"^(?:HB|SB|HJR|SJR|AB|ACA|SCA)\d+$")
 FEDERAL_TYPES = re.compile(r"^(?:HR|S|HJRES|SJRES)\d+$")  # federal HR is a bill; state HR is a resolution
@@ -20,6 +20,7 @@ STATE_TYPES = {
     "VA": re.compile(r"^(?:HB|SB|HJ|SJ)\d+$"),
 }
 _PATTERNS = {t: [re.compile(p, re.I) for p in ps] for t, ps in KEYWORDS.items()}
+_EXCLUDE = {t: [re.compile(p, re.I) for p in ps] for t, ps in KEYWORD_EXCLUDE.items()}
 
 
 def score(text: str) -> dict[str, int]:
@@ -27,6 +28,8 @@ def score(text: str) -> dict[str, int]:
     out = {}
     for topic, pats in _PATTERNS.items():
         n = sum(1 for p in pats if p.search(text))
+        if n and any(x.search(text) for x in _EXCLUDE.get(topic, ())):
+            n = 0
         if n:
             out[topic] = n
     return out
