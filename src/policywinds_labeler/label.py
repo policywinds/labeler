@@ -138,6 +138,23 @@ def verify_quotes(topics: list[dict], full_text: str) -> list[dict]:
     return topics
 
 
+# Writing systems that never belong in an English explanation of a U.S. bill (CJK, Cyrillic, Greek, Hebrew,
+# Arabic, Thai, Hangul). The model occasionally drops a stray word from another language mid-sentence.
+STRAY_SCRIPT = (
+    "[\u0370-\u03ff\u0400-\u04ff\u0590-\u06ff\u0e00-\u0e7f\u3040-\u30ff\u3400-\u4dbf"
+    "\u4e00-\u9fff\uac00-\ud7af\uf900-\ufaff]"
+)
+_stray = re.compile(STRAY_SCRIPT)
+MAX_ATTEMPTS = 2  # one retry when the model's own text has stray foreign-script characters
+
+
+def has_stray_text(result) -> bool:
+    """True if the model-written fields (rationale, axis_effect) contain foreign-script characters. Quotes are
+    not checked: they are copied from the bill and verified against it separately."""
+    parts = [result.rationale or ""] + [h.axis_effect or "" for h in result.topics]
+    return any(_stray.search(p) for p in parts)
+
+
 def keyword_guard(topics: list[dict], matched) -> list[dict]:
     """Drop tags of REQUIRES_KEYWORD topics the bill's keywords did not match (`matched`: prefilter topics)."""
     matched = set(matched or ())
@@ -171,7 +188,9 @@ join legislative_session s on s.id = b.session_id
 join bill_text t on t.doc_id = (b.texts -> -1 ->> 'doc_id')::int and t.ok
 where b.is_candidate
   and not exists (select 1 from classification c
-                  where c.bill_id = b.id and c.doc_id = t.doc_id and c.prompt_version >= {_NEEDED})
+                  where c.bill_id = b.id and c.doc_id = t.doc_id and c.prompt_version >= {_NEEDED}
+                    and not coalesce(c.rationale, '') ~ :stray
+                    and not jsonb_path_query_array(c.topics, '$[*].axis_effect')::text ~ :stray)
 order by s.sine_die, b.status desc, b.id
 limit 1000
 """  # noqa: S608
@@ -200,8 +219,16 @@ def run(db, s3, bucket: str, *, time_left, budget_usd: float) -> dict:
     schema = to_strict_json_schema(Classification)
     client = make_client()
     sysmsg = system_prompt()
-    stats = {"classified": 0, "relevant": 0, "quote_fail": 0, "errors": 0, "cost_usd": 0.0}
-    pending = db.execute(PENDING, {"base": FULL_RELABEL_VERSION})
+    stats = {
+        "classified": 0,
+        "relevant": 0,
+        "quote_fail": 0,
+        "errors": 0,
+        "cost_usd": 0.0,
+        "stray_retry": 0,
+        "stray_kept": 0,
+    }
+    pending = db.execute(PENDING, {"base": FULL_RELABEL_VERSION, "stray": STRAY_SCRIPT})
     lock = threading.Lock()
 
     def bump(**kw) -> None:
@@ -212,7 +239,49 @@ def run(db, s3, bucket: str, *, time_left, budget_usd: float) -> dict:
     def one(b: dict) -> None:
         text = s3.get_object(Bucket=bucket, Key=b["s3_key"])["Body"].read().decode()
         msg = user_message(b, text)
+        for _attempt in range(MAX_ATTEMPTS):
+            ok, result, resp = call(msg)
+            if not ok or not has_stray_text(result):
+                break
+            bump(stray_retry=1)
+        if not ok:
+            bump(errors=1)
+            return
+        if has_stray_text(result):
+            bump(stray_kept=1)  # still stray after retries: stored, and picked up again by PENDING next run
+        pf = b.get("prefilter")
+        while isinstance(pf, str):
+            pf = json.loads(pf)
+        topics = keyword_guard(dedupe([h.model_dump(mode="json") for h in result.topics]), pf)
+        topics = verify_quotes(topics, text)
+        quotes_ok = all(t["quote_ok"] for t in topics)
+        db.execute(
+            "insert into classification (bill_id, doc_id, prompt_version, model, returned_model, input_sha256, "
+            "relevant, topics, rationale, quotes_ok) values (:b, :d, :pv, :m, :rm, :sha, :rel, :t, :ra, :q) "
+            "on conflict (bill_id, doc_id, prompt_version) do update set returned_model = excluded.returned_model, "
+            "input_sha256 = excluded.input_sha256, relevant = excluded.relevant, topics = excluded.topics, "
+            "rationale = excluded.rationale, quotes_ok = excluded.quotes_ok, created_at = now() "
+            "where coalesce(classification.rationale, '') ~ :stray "
+            "or jsonb_path_query_array(classification.topics, '$[*].axis_effect')::text ~ :stray",
+            {
+                "stray": STRAY_SCRIPT,
+                "b": b["id"],
+                "d": b["doc_id"],
+                "pv": PROMPT_VERSION,
+                "m": config.LLM_MODEL,
+                "rm": resp.model,
+                "sha": hashlib.sha256((sysmsg + msg).encode()).hexdigest(),
+                "rel": result.relevant and bool(topics),
+                "t": topics,
+                "ra": result.rationale,
+                "q": quotes_ok,
+            },
+        )
+        bump(classified=1, relevant=int(result.relevant and bool(topics)), quote_fail=int(not quotes_ok))
+
+    def call(msg: str):
         usage: dict = {}
+        result = resp = None
         try:
             resp = client.chat.completions.create(
                 model=config.LLM_MODEL,
@@ -243,33 +312,7 @@ def run(db, s3, bucket: str, *, time_left, budget_usd: float) -> dict:
             },
         )
         bump(cost_usd=cost)
-        if not ok:
-            bump(errors=1)
-            return
-        pf = b.get("prefilter")
-        while isinstance(pf, str):
-            pf = json.loads(pf)
-        topics = keyword_guard(dedupe([h.model_dump(mode="json") for h in result.topics]), pf)
-        topics = verify_quotes(topics, text)
-        quotes_ok = all(t["quote_ok"] for t in topics)
-        db.execute(
-            "insert into classification (bill_id, doc_id, prompt_version, model, returned_model, input_sha256, "
-            "relevant, topics, rationale, quotes_ok) values (:b, :d, :pv, :m, :rm, :sha, :rel, :t, :ra, :q) "
-            "on conflict (bill_id, doc_id, prompt_version) do nothing",
-            {
-                "b": b["id"],
-                "d": b["doc_id"],
-                "pv": PROMPT_VERSION,
-                "m": config.LLM_MODEL,
-                "rm": resp.model,
-                "sha": hashlib.sha256((sysmsg + msg).encode()).hexdigest(),
-                "rel": result.relevant and bool(topics),
-                "t": topics,
-                "ra": result.rationale,
-                "q": quotes_ok,
-            },
-        )
-        bump(classified=1, relevant=int(result.relevant and bool(topics)), quote_fail=int(not quotes_ok))
+        return ok, result, resp
 
     with ThreadPoolExecutor(CONCURRENCY) as pool:
         i = 0
