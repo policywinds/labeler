@@ -15,9 +15,7 @@ from concurrent.futures import ThreadPoolExecutor
 from lawtracker import config, prefilter
 from lawtracker.topics import DEFINITIONS, DIRECTION_AXES, DIRECTION_GUIDE, REQUIRES_KEYWORD, TOPICS
 
-PROMPT_VERSION = (
-    7  # v7: custody-support scope (no child-welfare, prison visitation, divorce grounds), third parties, one direction
-)
+PROMPT_VERSION = 8  # v8: custody rules for custodial interference offenses and reunification therapy
 CONCURRENCY = 4
 
 
@@ -59,6 +57,12 @@ def system_prompt() -> str:
         "  at the expense of the parents, so judge them from the parent's side, never the third party's: making",
         "  grandparent visitation easier -> custody-support RESTRICTS; making it harder for nonparents to win",
         "  custody or access -> custody-support EXPANDS.",
+        "  Interference with custody or possession: extending the offense so a custodial parent can also commit it",
+        "  (e.g. by keeping the child from the other parent during that parent's court-ordered time) protects the",
+        "  less-custodial parent -> custody-support EXPANDS.",
+        "  Reunification therapy and similar court-ordered services that restore a child's contact with a parent:",
+        "  requiring both parents' consent, banning them, or otherwise limiting them -> custody-support RESTRICTS;",
+        "  making them easier to order -> EXPANDS.",
         "  Out of scope for custody-support (return no custody-support tag): child-welfare cases brought by the",
         "  state (child-protective agency removals, foster care, state-filed termination of parental rights, and",
         "  the lawyers, reports and procedures in those cases); visitation of prison or jail inmates; police",
@@ -152,7 +156,7 @@ def dedupe(topics: list[dict]) -> list[dict]:
 # Labels from FULL_RELABEL_VERSION on stay current for a bill unless its keywords match a topic added later
 # (TOPIC_ADDED): adding a topic relabels only the bills it can touch, not every bill.
 FULL_RELABEL_VERSION = 5
-TOPIC_ADDED = {"custody-support": 7}  # v7 relabels the custody bills again (scope and rules fixed)
+TOPIC_ADDED = {"custody-support": 8}  # v7, v8 relabel the custody bills again (scope and rules fixed)
 _NEEDED = (
     "greatest(:base, "
     + ", ".join(f"case when b.prefilter -> '{tp}' is not null then {v} else 0 end" for tp, v in TOPIC_ADDED.items())

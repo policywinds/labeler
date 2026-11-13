@@ -232,6 +232,16 @@ KEYWORD_EXCLUDE: dict[str, list[str]] = {
         r"home ?school",
         r"vital records?|death records?",
         r"divorce; (?:grounds|cruelty)",  # Virginia divorce-grounds bills (no custody or support change)
+        # State-filed cases (parents against the state; see docs/topics-backlog.md) and other out-of-scope terms
+        r"governmental entit",
+        r"attorneys? ad litem",
+        r"removal and placement",
+        r"termination of the parent-child relationship",
+        r"relief of care (?:&|and) custody",  # Virginia: a parent asks social services to take the child
+        r"companion animal",
+        r"\bretire|\bpension",
+        r"religious barrier",
+        r"gender[- ]affirming",  # covered by the transgender topic
     ],
 }
 # Topics whose labels count only for bills that matched the topic's keywords (precision guard; see classify).
