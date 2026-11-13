@@ -79,6 +79,8 @@ def system_prompt() -> str:
         "  use what that statute does if you know it reliably, and name it in axis_effect; if you do not know",
         "  what it does, do not infer a direction from the citation alone.",
         "Judge only from the provided text. Use neutral language in the rationale.",
+        "Write rationale and axis_effect in plain English only: no words or characters from any other language",
+        "  or script.",
         "",
         "quote: copy one short passage (one sentence or clause, under 300 characters) EXACTLY as it appears in",
         "the bill text, supporting the tag and direction. Do not paraphrase, fix spelling or join passages.",
