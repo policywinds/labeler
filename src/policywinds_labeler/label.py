@@ -94,12 +94,15 @@ def norm(s: str) -> str:
 
 
 def verify_quotes(topics: list[dict], full_text: str) -> list[dict]:
-    """A quote passes if its words appear, in order and contiguous, in the bill text (ignoring line numbers,
-    punctuation and spacing). Requires at least 4 words so trivial fragments cannot pass."""
-    hay = " " + norm(_line_no.sub(" ", full_text)) + " "
+    """A quote passes if its letters and digits appear, in order and contiguous, in the bill text (ignoring line
+    numbers, punctuation and all spacing). Spacing is ignored entirely because printed bills split words across
+    lines ("behav-" / "ioral" in New York's numbered columns), which the model quotes whole. Requires at least
+    4 words and 20 characters so trivial fragments cannot pass."""
+    hay = norm(_line_no.sub(" ", full_text)).replace(" ", "")
     for t in topics:
         q = norm(t.get("quote") or "")
-        t["quote_ok"] = len(q.split()) >= 4 and f" {q} " in hay
+        flat = q.replace(" ", "")
+        t["quote_ok"] = len(q.split()) >= 4 and len(flat) >= 20 and flat in hay
     return topics
 
 
