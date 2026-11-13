@@ -6,7 +6,7 @@ import re
 
 from lawtracker.topics import KEYWORDS
 
-VERSION = 2  # v2: Florida H/S numbering
+VERSION = 3  # v2: Florida H/S numbering; v3: abortion keywords "conception", "conceived"
 # Bills and joint resolutions (constitutional amendments). Simple/concurrent resolutions are mostly ceremonial.
 BILL_TYPES = re.compile(r"^(?:HB|SB|HJR|SJR|AB|ACA|SCA)\d+$")
 FEDERAL_TYPES = re.compile(r"^(?:HR|S|HJRES|SJRES)\d+$")  # federal HR is a bill; state HR is a resolution

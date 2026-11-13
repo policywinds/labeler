@@ -144,6 +144,8 @@ KEYWORDS: dict[str, list[str]] = {
         r"personhood",
         r"\bpregnancy center",
         r"unborn",
+        r"\bconception\b",  # e.g. child support from conception (TX SB942, US HR1104)
+        r"\bconceived\b",
     ],
     "immigration-enforcement": [
         r"immigra",
