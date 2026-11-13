@@ -34,7 +34,13 @@ def test_schema_is_strict_and_uses_supported_keywords():
 def test_tag_enum_covers_all_topics():
     tags = all_tags()
     assert len(tags) == sum(len(v) for v in TOPICS.values())
-    assert {t.split("/")[0] for t in tags} == {"firearms", "transgender", "abortion", "immigration-enforcement"}
+    assert {t.split("/")[0] for t in tags} == {
+        "firearms",
+        "transgender",
+        "abortion",
+        "immigration-enforcement",
+        "custody-support",
+    }
 
 
 def test_direction_is_a_required_enum_on_every_topic_hit():

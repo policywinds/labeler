@@ -15,7 +15,7 @@ from concurrent.futures import ThreadPoolExecutor
 from lawtracker import config, prefilter
 from lawtracker.topics import DEFINITIONS, DIRECTION_AXES, DIRECTION_GUIDE, TOPICS
 
-PROMPT_VERSION = 5  # v4: explicit rule for bans of activities (v3 read a conversion-therapy ban as restricts)
+PROMPT_VERSION = 6  # v6: custody-support topic (only bills matching its keywords are relabelled; see PENDING)
 CONCURRENCY = 4
 
 
@@ -40,7 +40,14 @@ def system_prompt() -> str:
         "  Examples: banning therapy that tries to change a minor's gender identity -> transgender EXPANDS;",
         "  barring police from sharing data with ICE -> immigration-enforcement RESTRICTS;",
         "  prohibiting cities from banning guns in parks -> firearms EXPANDS;",
-        "  prohibiting abortion after 6 weeks -> abortion RESTRICTS.",
+        "  prohibiting abortion after 6 weeks -> abortion RESTRICTS;",
+        "  requiring child support from the date of conception -> custody-support RESTRICTS.",
+        "  Making it legally costly to restrict something EXPANDS it: e.g. making a business's no-carry sign",
+        "  evidence of its liability for crimes on its property -> firearms EXPANDS.",
+        "Fetal personhood: a bill that defines an 'unborn child' at any stage of development, or gives one legal",
+        "  rights (wrongful death, child support, tax status), gets abortion/personhood-ivf RESTRICTS, in addition",
+        "  to any other topic it touches, even when it exempts the mother or doctors. 'Expands the definition'",
+        "  of a person or child to include the unborn is still RESTRICTS for abortion.",
         "  Never choose 'restricts' just because the bill uses the word 'prohibit'; judge the effect on the axis.",
         "Deleted and repealed law: text shown as [deleted: ...] is EXISTING law that the bill strikes out; the",
         "  bill does not enact it. Judge the change: removing a restriction moves the topic the opposite way from",
@@ -118,17 +125,28 @@ def dedupe(topics: list[dict]) -> list[dict]:
     return list(best.values())
 
 
-PENDING = """
+# Labels from FULL_RELABEL_VERSION on stay current for a bill unless its keywords match a topic added later
+# (TOPIC_ADDED): adding a topic relabels only the bills it can touch, not every bill.
+FULL_RELABEL_VERSION = 5
+TOPIC_ADDED = {"custody-support": 6}
+_NEEDED = (
+    "greatest(:base, "
+    + ", ".join(f"case when b.prefilter -> '{tp}' is not null then {v} else 0 end" for tp, v in TOPIC_ADDED.items())
+    + ")"
+)
+# Built only from the constants above (topic tags checked against TOPICS, integer versions); no user input.
+assert all(tp in TOPICS and isinstance(v, int) for tp, v in TOPIC_ADDED.items())
+PENDING = f"""
 select b.id, b.state, b.number, b.title, b.sponsors, t.doc_id, t.s3_key
 from bill b
 join legislative_session s on s.id = b.session_id
 join bill_text t on t.doc_id = (b.texts -> -1 ->> 'doc_id')::int and t.ok
 where b.is_candidate
   and not exists (select 1 from classification c
-                  where c.bill_id = b.id and c.doc_id = t.doc_id and c.prompt_version = :pv)
+                  where c.bill_id = b.id and c.doc_id = t.doc_id and c.prompt_version >= {_NEEDED})
 order by s.sine_die, b.status desc, b.id
 limit 1000
-"""
+"""  # noqa: S608
 
 
 BUDGET_TZ = "America/Chicago"
@@ -155,7 +173,7 @@ def run(db, s3, bucket: str, *, time_left, budget_usd: float) -> dict:
     client = make_client()
     sysmsg = system_prompt()
     stats = {"classified": 0, "relevant": 0, "quote_fail": 0, "errors": 0, "cost_usd": 0.0}
-    pending = db.execute(PENDING, {"pv": PROMPT_VERSION})
+    pending = db.execute(PENDING, {"base": FULL_RELABEL_VERSION})
     lock = threading.Lock()
 
     def bump(**kw) -> None:

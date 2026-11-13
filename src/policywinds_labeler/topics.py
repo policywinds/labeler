@@ -32,6 +32,15 @@ TOPICS: dict[str, list[str]] = {
         "detention-transport",
         "other",
     ],
+    "custody-support": [
+        "custody-parenting-time",
+        "child-support",
+        "paternity",
+        "support-enforcement",
+        "alimony",
+        "domestic-violence-custody",
+        "other",
+    ],
 }
 
 # Direction axis per topic (docs/mvp.md, AI pipeline). Neutral wording: "expands" and "restricts" refer
@@ -41,6 +50,7 @@ TOPICS: dict[str, list[str]] = {
 TOPIC_SLUG: dict[str, str] = {
     "firearms": "guns",
     "immigration-enforcement": "immigration",
+    "custody-support": "custody",
 }
 
 DIRECTION_AXES: dict[str, str] = {
@@ -48,6 +58,9 @@ DIRECTION_AXES: dict[str, str] = {
     "transgender": "legal recognition of, and access to services and facilities for, transgender people",
     "abortion": "legal access to abortion",
     "immigration-enforcement": "the scope of immigration enforcement by state or local government",
+    # Gender-neutral on purpose: the measure is the parent who pays support or has less custody, whoever it is.
+    "custody-support": "the rights of the parent who pays support or has less custody, against the obligations "
+    "placed on that parent",
 }
 assert DIRECTION_AXES.keys() == TOPICS.keys()
 
@@ -78,6 +91,15 @@ DEFINITIONS: dict[str, str] = {
     "for illegal entry or presence, border security operations, employer verification (E-Verify), detention "
     "and transport of migrants, human smuggling tied to immigration. Not: benefits or eligibility for "
     "immigrants, worker visas, foreign land-ownership rules, or economic development with no enforcement provision.",
+    "custody-support": "Laws on child custody and parenting time, child support, paternity and spousal support "
+    "(alimony): custody standards and presumptions (including joint or equal shared parenting), parenting-time "
+    "enforcement and relocation, how child support is calculated, when it starts and ends (including retroactive "
+    "support and support from conception), enforcement and penalties for unpaid support, establishing or "
+    "disestablishing paternity (including genetic testing and paternity fraud), alimony amount, duration and "
+    "termination, and domestic-violence or abuse findings that change custody or parenting time. Not: protective "
+    "orders or criminal domestic-violence penalties that do not change custody or parenting time, adoption, "
+    "foster care or child-welfare removals, marriage rules, guardianship, inheritance, or administration of the "
+    "child-support agency with no change for parents.",
 }
 assert DEFINITIONS.keys() == TOPICS.keys()
 
@@ -167,6 +189,30 @@ KEYWORDS: dict[str, list[str]] = {
         r"lawful presence",
         r"federal immigration",
     ],
+    # "custody" alone would match criminal custody ("in custody", "custodial interrogation").
+    "custody-support": [
+        r"child support",
+        r"child custody",
+        r"custody of (?:a |the |minor )?child",
+        r"joint (?:legal |physical |managing )?(?:custody|conservator)",
+        r"\bnon-?custodial",
+        r"custodial parent",
+        r"(?:managing|possessory) conservator",  # Texas terms for custody
+        r"conservatorship of (?:a |the )?child",
+        r"possession of (?:and access to )?(?:a |the )?child",
+        r"parent-child relationship",  # Texas SAPCR
+        r"parenting (?:time|plan)",
+        r"shared parenting",
+        r"(?:child|grandparent|parental|parenting) visitation",
+        r"visitation (?:rights|orders?|schedule)",
+        r"\bparentage",
+        r"paternity",
+        r"spousal (?:support|maintenance)",
+        r"\balimony",
+        r"\bdivorce",
+        r"dissolution of (?:a |the )?marriage",
+        r"support orders?",
+    ],
 }
 assert KEYWORDS.keys() == TOPICS.keys()
 
@@ -205,6 +251,18 @@ DIRECTION_GUIDE: dict[str, dict[str, str]] = {
         "limited-cooperation policies, limits on sharing data with ICE, barring enforcement officers from "
         "schools, courts or health facilities without a judicial warrant, limits on detention contracts, "
         "repealing required ICE agreements)",
+    },
+    "custody-support": {
+        "expands": "more rights or fewer obligations for the parent who pays support or has less custody (e.g. a "
+        "presumption of joint or equal shared parenting, enforcing parenting time, ending support when genetic "
+        "testing excludes the man named as father, limits on retroactive support, easier modification or an "
+        "earlier end of child support or alimony, alimony caps or end dates, requiring evidence or a hearing before "
+        "abuse allegations change custody)",
+        "restricts": "fewer rights or more obligations for that parent (e.g. support starting at conception or "
+        "reaching further back, support extended past 18 or through college, higher support amounts, new penalties "
+        "for unpaid support such as license suspension, jail or new crimes, limits on contesting paternity, "
+        "presumptions against custody or parenting time for a parent found to have committed domestic violence, "
+        "longer or permanent alimony)",
     },
 }
 assert DIRECTION_GUIDE.keys() == TOPICS.keys()
