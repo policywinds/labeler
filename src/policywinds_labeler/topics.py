@@ -229,6 +229,9 @@ KEYWORD_EXCLUDE: dict[str, list[str]] = {
         r"interrogation|law[- ]enforcement",
         r"foster care|protective services|child protective|\bDFPS\b|child welfare",
         r"tax credit",
+        r"home ?school",
+        r"vital records?|death records?",
+        r"divorce; (?:grounds|cruelty)",  # Virginia divorce-grounds bills (no custody or support change)
     ],
 }
 # Topics whose labels count only for bills that matched the topic's keywords (precision guard; see classify).
