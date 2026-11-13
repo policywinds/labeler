@@ -11,7 +11,14 @@ VERSION = 2  # v2: Florida H/S numbering
 BILL_TYPES = re.compile(r"^(?:HB|SB|HJR|SJR|AB|ACA|SCA)\d+$")
 FEDERAL_TYPES = re.compile(r"^(?:HR|S|HJRES|SJRES)\d+$")  # federal HR is a bill; state HR is a resolution
 # States whose LegiScan numbering differs from the default (FL numbers bills and joint resolutions H1234/S1234).
-STATE_TYPES = {"US": FEDERAL_TYPES, "FL": re.compile(r"^[HS]\d+$")}
+# NY: Assembly/Senate bills A1234/S1234 (resolutions are J/K/R/E). VA: HB/SB plus HJ/SJ joint resolutions, which
+# carry constitutional amendments (HJR/SJR spelling is not used there).
+STATE_TYPES = {
+    "US": FEDERAL_TYPES,
+    "FL": re.compile(r"^[HS]\d+$"),
+    "NY": re.compile(r"^[AS]\d+$"),
+    "VA": re.compile(r"^(?:HB|SB|HJ|SJ)\d+$"),
+}
 _PATTERNS = {t: [re.compile(p, re.I) for p in ps] for t, ps in KEYWORDS.items()}
 
 
