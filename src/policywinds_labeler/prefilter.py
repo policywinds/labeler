@@ -34,11 +34,16 @@ def hits(text: str) -> list[tuple[int, int]]:
     return sorted(spans)
 
 
+_REPEAL = re.compile(r"(?i)\b(?:is|are) (?:hereby )?repealed\b")
+
+
 def windows(text: str, radius: int = 1500, max_chars: int = 24000) -> str:
     """Merged ±radius windows around keyword hits; the head of the text if there are none."""
     spans = hits(text)
     if not spans:
         return text[:max_chars]
+    # Repeal clauses ("... is repealed", "are repealed:") can change a topic without naming it: keep them too.
+    spans = sorted(spans + [(m.start(), m.end()) for m in _REPEAL.finditer(text)])
     merged: list[list[int]] = []
     for s, e in spans:
         s, e = max(0, s - radius), min(len(text), e + radius)

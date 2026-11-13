@@ -15,7 +15,7 @@ from concurrent.futures import ThreadPoolExecutor
 from lawtracker import config, prefilter
 from lawtracker.topics import DEFINITIONS, DIRECTION_AXES, DIRECTION_GUIDE, TOPICS
 
-PROMPT_VERSION = 4  # v4: explicit rule for bans of activities (v3 read a conversion-therapy ban as restricts)
+PROMPT_VERSION = 5  # v4: explicit rule for bans of activities (v3 read a conversion-therapy ban as restricts)
 CONCURRENCY = 4
 
 
@@ -42,10 +42,19 @@ def system_prompt() -> str:
         "  prohibiting cities from banning guns in parks -> firearms EXPANDS;",
         "  prohibiting abortion after 6 weeks -> abortion RESTRICTS.",
         "  Never choose 'restricts' just because the bill uses the word 'prohibit'; judge the effect on the axis.",
+        "Deleted and repealed law: text shown as [deleted: ...] is EXISTING law that the bill strikes out; the",
+        "  bill does not enact it. Judge the change: removing a restriction moves the topic the opposite way from",
+        "  the restriction itself (striking or repealing a ban on X EXPANDS X; striking an exemption from a ban",
+        "  RESTRICTS). The title alone does not show the direction; decide from what the bill adds or removes.",
+        "  When a provision repeals a statute only by citation (e.g. 'Chapter 2273, Government Code' is repealed),",
+        "  use what that statute does if you know it reliably, and name it in axis_effect; if you do not know",
+        "  what it does, do not infer a direction from the citation alone.",
         "Judge only from the provided text. Use neutral language in the rationale.",
         "",
         "quote: copy one short passage (one sentence or clause, under 300 characters) EXACTLY as it appears in",
         "the bill text, supporting the tag and direction. Do not paraphrase, fix spelling or join passages.",
+        "Prefer text the bill adds or keeps, or its repeal clause. If the key change is a deletion, you may quote",
+        "the deletion including its '[deleted: ' marker.",
         "",
         "Topics:",
     ]
