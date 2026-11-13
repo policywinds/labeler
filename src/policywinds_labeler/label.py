@@ -81,6 +81,7 @@ def user_message(bill: dict, text: str) -> str:
 _ws = re.compile(r"\s+")
 _line_no = re.compile(r"(?m)^\s*\d{1,3}(?=\s)")  # PDF/GovInfo line numbers at line starts
 _non_word = re.compile(r"[^0-9a-z]+")
+_deleted = re.compile(r"\[deleted: [^\]]*\]")
 
 
 _small_num = re.compile(r"(?<!\S)\d{1,3}(?!\S)")
@@ -99,10 +100,12 @@ def verify_quotes(topics: list[dict], full_text: str) -> list[dict]:
     lines ("behav-" / "ioral" in New York's numbered columns), which the model quotes whole. Requires at least
     4 words and 20 characters so trivial fragments cannot pass."""
     hay = norm(_line_no.sub(" ", full_text)).replace(" ", "")
+    # The model often quotes a provision as it reads after amendment: also accept the text without deletions.
+    amended = norm(_line_no.sub(" ", _deleted.sub(" ", full_text))).replace(" ", "")
     for t in topics:
         q = norm(t.get("quote") or "")
         flat = q.replace(" ", "")
-        t["quote_ok"] = len(q.split()) >= 4 and len(flat) >= 20 and flat in hay
+        t["quote_ok"] = len(q.split()) >= 4 and len(flat) >= 20 and (flat in hay or flat in amended)
     return topics
 
 
