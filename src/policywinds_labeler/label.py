@@ -131,8 +131,17 @@ limit 1000
 """
 
 
+BUDGET_TZ = "America/Chicago"
+
+
 def spent_today(db) -> float:
-    rows = db.execute("select coalesce(sum(cost_usd), 0) as c from llm_call where at >= date_trunc('day', now())")
+    # The budget day is the Central-time calendar day (the daily run is at 6 AM Central), not the UTC day,
+    # which starts at 6 PM Central and let evening work use up the next morning's budget.
+    rows = db.execute(
+        "select coalesce(sum(cost_usd), 0) as c from llm_call"
+        " where at >= date_trunc('day', now() at time zone :tz) at time zone :tz",
+        {"tz": BUDGET_TZ},
+    )
     return float(rows[0]["c"])
 
 
