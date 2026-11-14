@@ -1,4 +1,5 @@
-"""Free keyword prefilter over title + description. Tuned for recall; ranks candidates per topic."""
+"""Free keyword prefilter over title + description. Tuned for recall; ranks candidates per topic.
+Bills whose title hides the subject are caught by the full-text scan (textscan.py), which sets text_prefilter."""
 
 from __future__ import annotations
 
@@ -79,7 +80,7 @@ def run(db) -> dict:
     """(Re)score bills whose prefilter_version is stale. Candidate = bill type matches and any topic scores."""
     rows = list(
         db.paged(
-            "select id, state, number, title, description from bill "
+            "select id, state, number, title, description, text_prefilter from bill "
             "where (prefilter_version is distinct from :v) and id > :_after order by id limit :_limit",
             {"v": VERSION},
             page_size=1000,
@@ -89,7 +90,7 @@ def run(db) -> dict:
     for r in rows:
         sc = score(f"{r['title']} {r.get('description') or ''}")
         types = STATE_TYPES.get(r["state"], BILL_TYPES)
-        cand = bool(sc) and bool(types.match(r["number"]))
+        cand = bool(sc or r.get("text_prefilter")) and bool(types.match(r["number"]))  # text scan: textscan.py
         updates.append({"id": r["id"], "c": cand, "p": sc or None, "v": VERSION})
     db.executemany("update bill set is_candidate = :c, prefilter = :p, prefilter_version = :v where id = :id", updates)
     return {"scored": len(rows), "candidates": sum(u["c"] for u in updates)}
