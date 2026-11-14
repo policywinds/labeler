@@ -130,14 +130,47 @@ def verify_quotes(topics: list[dict], full_text: str) -> list[dict]:
     numbers, punctuation and all spacing). Spacing is ignored entirely because printed bills split words across
     lines ("behav-" / "ioral" in New York's numbered columns), which the model quotes whole. Requires at least
     4 words and 20 characters so trivial fragments cannot pass."""
-    hay = norm(_line_no.sub(" ", full_text)).replace(" ", "")
+
+    def flat(s: str) -> str:
+        return norm(_line_no.sub(" ", s)).replace(" ", "")
+
     # The model often quotes a provision as it reads after amendment: also accept the text without deletions.
-    amended = norm(_line_no.sub(" ", _deleted.sub(" ", full_text))).replace(" ", "")
+    # It also merges neighbouring strike-outs into one "[deleted: ...]": accept the text with the deletion
+    # markers removed (deleted words kept), compared with the quote's markers removed the same way.
+    hays = (flat(full_text), flat(_deleted.sub(" ", full_text)), flat(_unmark(full_text)))
     for t in topics:
-        q = norm(t.get("quote") or "")
-        flat = q.replace(" ", "")
-        t["quote_ok"] = len(q.split()) >= 4 and len(flat) >= 20 and (flat in hay or flat in amended)
+        quote = t.get("quote") or ""
+        q = norm(quote)
+        ok = len(q.split()) >= 4 and len(q.replace(" ", "")) >= 20
+        t["quote_ok"] = ok and (any(q.replace(" ", "") in h for h in hays) or flat(_unmark(quote)) in hays[2]
+                                or _list_item_ok(quote, full_text))  # fmt: skip
     return topics
+
+
+def _unmark(s: str) -> str:
+    return _deleted_mark.sub(r" \1 ", s)
+
+
+_deleted_mark = re.compile(r"\[deleted: ([^\]]*)\]?")
+# "The following provisions are repealed: (11) Chapter 170A, Health and Safety Code;" quotes a list's heading and
+# one of its numbered items, skipping the items between. The heading must be in the text directly followed by a
+# numbered item ("(1)"), and the quoted item must be within LIST_SPAN characters after it. Each part must be long
+# enough not to match by chance.
+_list_quote = re.compile(r"^\s*(?P<head>[^:]{12,}?):\s*(?P<item>\(\w{1,4}\)\s*.+)$", re.S)
+LIST_SPAN = 20000
+
+
+def _list_item_ok(quote: str, full_text: str) -> bool:
+    m = _list_quote.match(quote)
+    if not m:
+        return False
+    words = re.findall(r"[0-9A-Za-z]+", m["head"])
+    item = norm(m["item"]).replace(" ", "")
+    if len(words) < 3 or len(norm(m["item"]).split()) < 4:
+        return False
+    head = re.compile(r"\W+".join(map(re.escape, words)) + r"\W*:\s*\(\w{1,4}\)", re.I)
+    return any(item in norm(_line_no.sub(" ", full_text[h.start() : h.end() + LIST_SPAN])).replace(" ", "")
+               for h in head.finditer(full_text))  # fmt: skip
 
 
 # Writing systems that never belong in an English explanation of a U.S. bill (CJK, Cyrillic, Greek, Hebrew,
