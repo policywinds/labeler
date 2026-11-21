@@ -28,7 +28,7 @@ import re
 from policywinds_labeler import prefilter
 from policywinds_labeler.topics import DEFINITIONS, DIRECTION_AXES, DIRECTION_GUIDE, REQUIRES_KEYWORD, TOPICS
 
-PROMPT_VERSION = 9  # v9: effect line limit 300 -> 600, asked to stay under about 200 characters (v8: custody rules)
+PROMPT_VERSION = 10  # v10: immigration enforcement by any level of government (v9 relabeled out federal bills)
 
 
 def system_prompt() -> str:
@@ -221,4 +221,4 @@ def dedupe(topics: list[dict]) -> list[dict]:
 # Labels from FULL_RELABEL_VERSION on stay current for a bill unless its keywords match a topic added later
 # (TOPIC_ADDED): adding a topic relabels only the bills it can touch, not every bill.
 FULL_RELABEL_VERSION = 9  # v9 relabels every bill (effect lines no longer cut; possibly a new model)
-TOPIC_ADDED = {"custody-support": 8}  # v7, v8 relabel the custody bills again (scope and rules fixed)
+TOPIC_ADDED = {"custody-support": 8, "immigration-enforcement": 10}  # relabel only the bills those topics can touch

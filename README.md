@@ -81,6 +81,7 @@ The prompt has its own number, `policywinds_labeler.label.PROMPT_VERSION`. Every
 | Release | Prompt | Eval (claude-sonnet-5-5) |
 |---|---|---|
 | 0.1.0 | v9 | `eval/results/0.1.0.txt` |
+| 0.2.0 | v10 | `eval/results/0.2.0.txt` |
 
 ## Wrong label?
 

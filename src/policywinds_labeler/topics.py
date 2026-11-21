@@ -72,7 +72,7 @@ DIRECTION_AXES: dict[str, str] = {
     "firearms": "the ability to buy, own, carry or make firearms and accessories",
     "transgender": "legal recognition of, and access to services and facilities for, transgender people",
     "abortion": "legal access to abortion",
-    "immigration-enforcement": "the scope of immigration enforcement by state or local government",
+    "immigration-enforcement": "the scope of immigration enforcement, by Congress or by states and localities",
     # Gender-neutral on purpose: the measure is the parent who pays support or has less custody, whoever it is.
     "custody-support": "the rights of the parent who pays support or has less custody, against the obligations "
     "placed on that parent",
@@ -101,11 +101,14 @@ DEFINITIONS: dict[str, str] = {
     "funding or insurance coverage, fetal personhood and its effect on IVF, ballot measures and constitutional "
     "amendments on abortion. Not: general maternal or prenatal health, contraception-only bills (unless they "
     "define abortion), or IVF bills with no personhood or abortion provision.",
-    "immigration-enforcement": "Laws on enforcing immigration law by state or local government: cooperation "
-    "with federal immigration authorities (detainers, 287(g)), sanctuary policies and their bans, state crimes "
-    "for illegal entry or presence, border security operations, employer verification (E-Verify), detention "
-    "and transport of migrants, human smuggling tied to immigration. Not: benefits or eligibility for "
-    "immigrants, worker visas, foreign land-ownership rules, or economic development with no enforcement provision.",
+    "immigration-enforcement": "Laws on enforcing immigration law, federal as well as state and local: who can be "
+    "detained, deported or removed and on what grounds, detention and transport of migrants, border security "
+    "operations, staffing and technology, cooperation with federal immigration authorities (detainers, 287(g)), "
+    "sanctuary policies and their bans, limits on enforcement in schools, courts, health facilities or housing, "
+    "state crimes for illegal entry or presence, employer verification (E-Verify), human smuggling tied to "
+    "immigration. Not: benefits or eligibility for immigrants (health coverage, tuition, licenses, public "
+    "benefits), paths to legal status, visa and asylum programs, foreign land-ownership rules, or economic "
+    "development with no enforcement provision.",
     "custody-support": "Laws on child custody and parenting time, child support, paternity and spousal support "
     "(alimony): custody standards and presumptions (including joint or equal shared parenting), parenting-time "
     "enforcement and relocation, how child support is calculated, when it starts and ends (including retroactive "
@@ -290,10 +293,10 @@ DIRECTION_GUIDE: dict[str, dict[str, str]] = {
         "limits on medication abortion or travel, funding bans, fetal personhood)",
     },
     "immigration-enforcement": {
-        "expands": "more immigration enforcement by state or local government (e.g. requiring cooperation with ICE "
-        "or honoring detainers, banning sanctuary policies, state illegal-entry crimes, E-Verify mandates, "
-        "border operations)",
-        "restricts": "less immigration enforcement by state or local government (e.g. sanctuary or "
+        "expands": "more immigration enforcement (e.g. more grounds for deportation or detention, more border agents, "
+        "barriers or surveillance, requiring cooperation with ICE or honoring detainers, banning sanctuary "
+        "policies, state illegal-entry crimes, E-Verify mandates)",
+        "restricts": "less immigration enforcement (e.g. limits on deportation or detention, sanctuary or "
         "limited-cooperation policies, limits on sharing data with ICE, barring enforcement officers from "
         "schools, courts or health facilities without a judicial warrant, limits on detention contracts, "
         "repealing required ICE agreements)",
