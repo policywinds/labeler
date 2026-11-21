@@ -1,7 +1,8 @@
 from openai.lib._pydantic import to_strict_json_schema
 
-from lawtracker.llm.client import cost_usd
+from lawtracker.llm import prices
 from lawtracker.llm.schema import Classification
+from lawtracker.llm.types import Usage
 from lawtracker.topics import DIRECTION_AXES, TOPICS, all_tags
 
 
@@ -52,15 +53,20 @@ def test_direction_is_a_required_enum_on_every_topic_hit():
     assert DIRECTION_AXES.keys() == TOPICS.keys()
 
 
-def test_cost_counts_cached_and_reasoning_conservatively():
-    m = "grok-4.20-0309-non-reasoning"
-    base = cost_usd(m, {"prompt_tokens": 1_000_000, "completion_tokens": 0})
-    assert round(base, 4) == 1.25
-    cached = cost_usd(
-        m, {"prompt_tokens": 1_000_000, "completion_tokens": 0, "prompt_tokens_details": {"cached_tokens": 1_000_000}}
-    )
-    assert round(cached, 4) == 0.20
-    with_reasoning = cost_usd(
-        m, {"prompt_tokens": 0, "completion_tokens": 100, "completion_tokens_details": {"reasoning_tokens": 100}}
-    )
-    assert with_reasoning == 200 * 2.50 / 1_000_000
+def test_cost_counts_cached_writes_output_and_batch():
+    m = ("xai", "grok-4.20-0309-non-reasoning")
+    assert round(prices.cost(*m, Usage(input=1_000_000)), 4) == 1.25
+    assert round(prices.cost(*m, Usage(input=1_000_000, cached_read=1_000_000)), 4) == 0.20
+    s = ("anthropic", "claude-sonnet-5-5")
+    full = prices.cost(*s, Usage(input=1_000_000, cache_write=1_000_000, output=1_000_000))
+    assert round(full, 4) == 2.5 + 10.0
+    assert round(prices.cost(*s, Usage(input=1_000_000, output=1_000_000), batch=True), 4) == 6.0
+    # the estimate covers a typical answer (Sonnet used at most 915 output tokens in the 2026-11-21 test)
+    assert prices.estimate(*s, 30_000, batch=True) > prices.cost(*s, Usage(input=7_500, output=915), batch=True)
+
+
+def test_unknown_model_has_no_price():
+    import pytest
+
+    with pytest.raises(KeyError):
+        prices.cost("anthropic", "claude-unknown", Usage(input=1))

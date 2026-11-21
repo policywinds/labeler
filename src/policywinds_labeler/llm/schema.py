@@ -25,9 +25,9 @@ class TopicHit(BaseModel):
     model_config = ConfigDict(extra="forbid")
     tag: Tag = Field(description="topic/subtag")
     axis_effect: str = Field(
-        max_length=300,
-        description="One sentence, written before choosing direction: does this make the topic's 'expands' "
-        "outcome or its 'restricts' outcome more likely in practice, and why.",
+        max_length=600,  # v9: was 300, which cut about 1 in 6 lines mid-phrase; the prompt asks for under ~200
+        description="One sentence, ideally under 200 characters, written before choosing direction: does this make "
+        "the topic's 'expands' outcome or its 'restricts' outcome more likely in practice, and why.",
     )
     direction: Direction = Field(description="Effect on the topic's direction axis, consistent with axis_effect.")
     confidence: float = Field(ge=0, le=1)
