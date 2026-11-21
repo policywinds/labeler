@@ -1,0 +1,144 @@
+90(R) SB 80 - Introduced version - Bill Text
+90R318 AJZ-F
+By: Zaffirini
+S.B. No. 80
+A BILL TO BE ENTITLED
+AN ACT
+relating to prohibiting certain transfers, purchases, and
+possession of assault weapons; creating criminal offenses.
+BE IT ENACTED BY THE LEGISLATURE OF THE STATE OF TEXAS:
+SECTION 1. Chapter 46, Penal Code, is amended by adding
+Section 46.055 to read as follows:
+Sec. 46.055. UNLAWFUL PURCHASE OR POSSESSION OF ASSAULT
+WEAPON. (a) In this section, "assault weapon" means:
+(1) a semiautomatic centerfire rifle that has the
+capacity to accept a detachable magazine and has:
+(A) a pistol grip that protrudes conspicuously
+beneath the action of the firearm;
+(B) a folding or telescoping stock;
+(C) a thumbhole stock;
+(D) a second handgrip or a protruding grip that
+can be held by the non-trigger hand;
+(E) a flash suppressor; or
+(F) a grenade launcher or flare launcher;
+(2) a semiautomatic centerfire rifle that has a fixed
+magazine that holds more than 10 rounds of ammunition;
+(3) a semiautomatic centerfire rifle that has an
+overall length of less than 30 inches;
+(4) a semiautomatic shotgun that has the capacity to
+accept a detachable magazine;
+(5) a semiautomatic shotgun that has a folding or
+telescoping stock and has:
+(A) a thumbhole stock; or
+(B) a second handgrip or a protruding grip that
+can be held by the non-trigger hand;
+(6) a semiautomatic pistol that has the capacity to
+accept a detachable magazine and has:
+(A) a second handgrip or a protruding grip that
+can be held by the non-trigger hand;
+(B) an ammunition magazine that attaches to the
+pistol outside of the pistol grip;
+(C) a threaded barrel capable of accepting a
+flash suppressor, forward handgrip, or silencer; or
+(D) a shroud that is attached to or partially or
+completely encircles the barrel and that permits the shooter to
+hold the firearm with the non-trigger hand without being burned;
+(7) a semiautomatic pistol that has a fixed magazine
+that holds more than 10 rounds of ammunition;
+(8) a revolving cylinder shotgun; or
+(9) a conversion kit, part, or combination of parts
+from which an assault weapon can be assembled or with which a
+firearm may be converted into a weapon described by Subdivision
+(1), (2), (3), (4), (5), (6), (7), or (8).
+(b) A person who is younger than 21 years of age commits an
+offense if the person knowingly:
+(1) purchases an assault weapon; or
+(2) possesses an assault weapon.
+(c) An offense under this section is a Class A misdemeanor.
+(d) It is a defense to prosecution under Subsection (b)(1)
+that the actor purchased the assault weapon for the actual
+discharge of official duties as:
+(1) a peace officer; or
+(2) a member of the armed forces or state military
+forces as defined by Section 431.001, Government Code.
+(e) It is a defense to prosecution under Subsection (b)(2)
+that:
+(1) the actor possessed the assault weapon in the
+actual discharge of official duties, or directly en route to or from
+the person's place of assignment, as:
+(A) a peace officer; or
+(B) a member of the armed forces or state
+military forces as defined by Section 431.001, Government Code; or
+(2) the actor lawfully possessed the assault weapon on
+August 31, 2027.
+SECTION 2. Section 46.06, Penal Code, is amended by
+amending Subsections (a), (c), and (d) and adding Subsection (c-1)
+to read as follows:
+(a) A person commits an offense if the person:
+(1) sells, rents, leases, loans, or gives a handgun to
+any person knowing that the person to whom the handgun is to be
+delivered intends to use it unlawfully or in the commission of an
+unlawful act;
+(2) intentionally or knowingly sells, rents, leases,
+or gives or offers to sell, rent, lease, or give:
+(A) a [deleted: to any child younger than 18 years of age any firearm,] club, [deleted: or] location-restricted knife, or firearm
+other than an assault weapon to a person younger than 18 years of
+age; or
+(B) an assault weapon to a person younger than 21
+years of age;
+(3) intentionally, knowingly, or recklessly sells a
+firearm or ammunition for a firearm to any person who is
+intoxicated;
+(4) knowingly sells a firearm or ammunition for a
+firearm to any person who has been convicted of a felony before the
+fifth anniversary of the later of the following dates:
+(A) the person's release from confinement
+following conviction of the felony; or
+(B) the person's release from supervision under
+community supervision, parole, or mandatory supervision following
+conviction of the felony;
+(5) sells, rents, leases, loans, or gives a handgun to
+any person knowing that an active protective order is directed to
+the person to whom the handgun is to be delivered;
+(6) knowingly purchases, rents, leases, or receives as
+a loan or gift from another a handgun while an active protective
+order is directed to the actor; or
+(7) while prohibited from possessing a firearm under
+state or federal law, knowingly makes a material false statement on
+a form that is:
+(A) required by state or federal law for the
+purchase, sale, or other transfer of a firearm; and
+(B) submitted to a firearms dealer licensed under
+18 U.S.C. Section 923.
+(c) It is an affirmative defense to prosecution under
+Subsection (a)(2)(A) [deleted: (a)(2)] that the transfer was to a minor
+whose parent or the person having legal custody of the minor had
+given written permission for the sale or, if the transfer was other
+than a sale, the parent or person having legal custody had given
+effective consent.
+(c-1) It is a defense to prosecution under Subsection
+(a)(2)(B) that the transfer was to a person who provided evidence to
+the actor that the person is:
+(1) a peace officer; or
+(2) a member of the armed forces or state military
+forces as defined by Section 431.001, Government Code.
+(d) An offense under this section is a Class A misdemeanor,
+except that:
+(1) an offense under Subsection (a)(2)(A) [deleted: (a)(2)] is
+a state jail felony if the weapon that is the subject of the offense
+is a handgun; and
+(2) an offense under Subsection (a)(2)(B) or (a)(7) is
+a state jail felony.
+SECTION 3. Section 46.06(b), Penal Code, is amended by
+adding Subdivision (3) to read as follows:
+(3) "Assault weapon" has the meaning assigned by
+Section 46.055.
+SECTION 4. The change in law made by this Act applies only
+to an offense committed on or after the effective date of this Act.
+An offense committed before the effective date of this Act is
+governed by the law in effect on the date the offense was committed,
+and the former law is continued in effect for that purpose. For
+purposes of this section, an offense was committed before the
+effective date of this Act if any element of the offense occurred
+before that date.
+SECTION 5. This Act takes effect September 1, 2027.

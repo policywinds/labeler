@@ -1,0 +1,39 @@
+[Congressional Bills 119th Congress]
+[From the U.S. Government Publishing Office]
+[S. 2468 Introduced in Senate (IS)]
+<DOC>
+119th CONGRESS
+1st Session
+S. 2468
+To amend section 249 of the Immigration and Nationality Act to render
+available to certain long-term residents of the United States the
+benefit under that section.
+_______________________________________________________________________
+IN THE SENATE OF THE UNITED STATES
+July 28, 2025
+Mr. Padilla (for himself, Mr. Durbin, Mr. Schatz, Mrs. Murray, Mr.
+Murphy, Mr. Sanders, Ms. Warren, Mr. Markey, Ms. Duckworth, Mr. Booker,
+Mr. Lujan, and Mr. Schiff) introduced the following bill; which was
+read twice and referred to the Committee on the Judiciary
+_______________________________________________________________________
+A BILL
+To amend section 249 of the Immigration and Nationality Act to render
+available to certain long-term residents of the United States the
+benefit under that section.
+Be it enacted by the Senate and House of Representatives of the
+United States of America in Congress assembled,
+SECTION 1. SHORT TITLE.
+This Act may be cited as the ``Renewing Immigration Provisions of
+the Immigration Act of 1929''.
+SEC. 2. REGISTRY.
+(a) In General.--Section 249 of the Immigration and Nationality Act
+(8 U.S.C. 1259) is amended--
+(1) in the section header, by striking ``entered the united
+states prior to july 1, 1924 or january 1, 1972''; and
+inserting ``are long-term residents of the united states''; and
+(2) by amending subsection (a) to read as follows:
+``(a) entered the United States at least 7 years before the
+application date;''.
+(b) Effective Date.--The amendments made by this section shall take
+effect 60 days after the date of the enactment of this Act.
+<all>

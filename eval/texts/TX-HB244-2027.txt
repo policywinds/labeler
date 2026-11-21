@@ -1,0 +1,43 @@
+90(R) HB 244 - Introduced version - Bill Text
+90R871 SCF-F
+By: Howard
+H.B. No. 244
+A BILL TO BE ENTITLED
+AN ACT
+relating to covered benefits under the child health plan.
+BE IT ENACTED BY THE LEGISLATURE OF THE STATE OF TEXAS:
+SECTION 1. Section 62.151, Health and Safety Code, is
+amended by amending Subsection (c) and adding Subsections (h) and
+(i) to read as follows:
+(c) In modifying the plan, the executive commissioner,
+except as provided by Subsection (h), shall ensure that primary and
+preventive health benefits do not include reproductive services,
+other than prenatal care and care related to diseases, illnesses,
+or abnormalities related to the reproductive system.
+(h) Subject to Subsection (i), the child health plan must
+provide coverage for prescription contraceptive drugs, supplies,
+or devices approved by the United States Food and Drug
+Administration. The child health plan may not provide coverage for
+abortifacients or any other drug or device that terminates a
+pregnancy.
+(i) The child health plan may provide coverage for
+prescription contraceptive drugs, supplies, or devices for an
+enrolled child younger than 18 years of age for the purpose of
+primary and preventive reproductive health care only if the
+prescribing or dispensing health care provider receives written
+consent from the enrolled child's parent, guardian, or managing
+conservator, from another adult if authorized under Section 32.001,
+Family Code, or from the enrolled child if authorized under Section
+32.003, Family Code, for the prescription or dispensing of the
+contraceptive drug, supply, or device.
+SECTION 2. If before implementing any provision of this Act
+a state agency determines that a waiver or authorization from a
+federal agency is necessary for implementation of that provision,
+the agency affected by the provision shall request the waiver or
+authorization and may delay implementing that provision until the
+waiver or authorization is granted.
+SECTION 3. This Act takes effect immediately if it receives
+a vote of two-thirds of all the members elected to each house, as
+provided by Section 39, Article III, Texas Constitution. If this
+Act does not receive the vote necessary for immediate effect, this
+Act takes effect September 1, 2027.

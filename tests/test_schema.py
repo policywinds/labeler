@@ -1,9 +1,24 @@
+# Copyright 2026 Kernelcraft LLC (PolicyWinds)
+# SPDX-License-Identifier: Apache-2.0
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 from openai.lib._pydantic import to_strict_json_schema
 
-from lawtracker.llm import prices
-from lawtracker.llm.schema import Classification
-from lawtracker.llm.types import Usage
-from lawtracker.topics import DIRECTION_AXES, TOPICS, all_tags
+from policywinds_labeler.llm import prices
+from policywinds_labeler.llm.schema import Classification
+from policywinds_labeler.llm.types import Usage
+from policywinds_labeler.topics import DIRECTION_AXES, TOPICS, all_tags
 
 
 def _walk(node):

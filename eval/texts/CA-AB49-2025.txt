@@ -1,0 +1,216 @@
+20250AB__004992CHP
+92
+INTRODUCED
+2024-12-02
+AMENDED_ASSEMBLY
+2025-04-02
+AMENDED_ASSEMBLY
+2025-04-21
+AMENDED_SENATE
+2025-06-23
+AMENDED_SENATE
+2025-07-17
+AMENDED_SENATE
+2025-08-26
+PASSED_ASSEMBLY
+2025-09-02
+PASSED_SENATE
+2025-09-02
+ENROLLED
+2025-09-04
+CHAPTERED
+2025-09-20
+APPROVED
+2025-09-20
+FILED
+2025-09-20
+2025
+0
+AB
+49
+CHP
+2025
+CHP
+0
+122
+Introduced by Assembly Members Muratsuchi, Ortega, and Celeste Rodriguez and Senator Gonzalez
+(Principal coauthors: Assembly Members Carrillo and Fong)
+(Coauthors: Assembly Members Addis, Arambula, Bonta, Bryan, Connolly, Elhawary, Mark González, Kalra, Lee, Lowenthal, Quirk-Silva, Solache, Soria, Wilson, and Zbur)
+(Coauthors: Senators Arreguín, Becker, Cortese, Pérez, and Rubio)
+LEAD_AUTHOR
+ASSEMBLY
+Muratsuchi
+LEAD_AUTHOR
+ASSEMBLY
+Ortega
+LEAD_AUTHOR
+ASSEMBLY
+Celeste Rodriguez
+LEAD_AUTHOR
+SENATE
+Gonzalez
+PRINCIPAL_COAUTHOR
+ASSEMBLY
+Carrillo
+PRINCIPAL_COAUTHOR
+ASSEMBLY
+Fong
+COAUTHOR
+ASSEMBLY
+Addis
+COAUTHOR
+ASSEMBLY
+Arambula
+COAUTHOR
+ASSEMBLY
+Bonta
+COAUTHOR
+ASSEMBLY
+Bryan
+COAUTHOR
+ASSEMBLY
+Connolly
+COAUTHOR
+ASSEMBLY
+Elhawary
+COAUTHOR
+ASSEMBLY
+Mark González
+COAUTHOR
+ASSEMBLY
+Kalra
+COAUTHOR
+ASSEMBLY
+Lee
+COAUTHOR
+ASSEMBLY
+Lowenthal
+COAUTHOR
+ASSEMBLY
+Quirk-Silva
+COAUTHOR
+ASSEMBLY
+Solache
+COAUTHOR
+ASSEMBLY
+Soria
+COAUTHOR
+ASSEMBLY
+Wilson
+COAUTHOR
+ASSEMBLY
+Zbur
+COAUTHOR
+SENATE
+Arreguín
+COAUTHOR
+SENATE
+Becker
+COAUTHOR
+SENATE
+Cortese
+COAUTHOR
+SENATE
+Pérez
+COAUTHOR
+SENATE
+Rubio
+An act to amend Section 234.7 of the Education Code, relating to education, and declaring the urgency thereof, to take effect immediately.
+education, and declaring the urgency thereof, to take effect immediately
+Schoolsites: immigration enforcement.
+(1)Existing law prohibits, except as required by state or federal law or as required to administer a state or federally supported educational program, school officials and employees of a school district, county office of education, or charter school from collecting information or documents regarding citizenship or immigration status of pupils or their family members. Existing law requires the superintendent of a school district, the superintendent of a county office of education, and the principal of a charter school, as applicable, to report to the respective governing board or body of the local educational agency in a timely manner any requests for information or access to a schoolsite by an officer or employee of a law enforcement agency for the purpose of enforcing the immigration laws in a manner that ensures the confidentiality and privacy of any
+potentially identifying information.
+This bill would prohibit school officials and employees of a local educational agency from allowing an officer or employee of an agency conducting immigration enforcement to enter a nonpublic area of a schoolsite, as defined, for any purpose without being presented with a valid judicial warrant, judicial subpoena, or a court
+order. The bill would require school officials and employees of a local educational agency, to the extent practicable, to request valid identification of any officer or employee of an agency conducting immigration enforcement seeking to enter a nonpublic area of a schoolsite. The bill would also prohibit a local educational agency and its personnel from disclosing or providing, in writing, verbally, or in any other manner, the education records of or any information about a
+pupil or a pupil’s family and household without the pupil’s parents’ or guardians’ written consent, a school employee, or a teacher to an officer or employee of an agency conducting immigration enforcement without a valid judicial warrant or judicial subpoena, or court order directing the local educational agency or its personnel to do so. By imposing additional duties on local educational agencies, the bill would impose a state-mandated local program.
+(2)Existing law requires the Attorney General,
+by April 1, 2018, in consultation with the appropriate stakeholders, to publish model policies limiting assistance with immigration enforcement at public schools, to the fullest extent possible consistent with federal and state law, and ensuring that public schools remain safe and accessible to all California residents, regardless of immigration status, as provided. Existing law requires local educational agencies, by July 1, 2018, to adopt those model policies developed by the Attorney General or equivalent policies.
+This bill would require the Attorney General, by December 1, 2025, to update those model policies to ensure that the policies align with the above-described prohibitions on school officials and employees of local educational agencies allowing
+an officer or employee of an agency conducting immigration enforcement to enter a nonpublic area of a schoolsite without a valid judicial warrant or judicial subpoena, or a court order and from disclosing or providing certain information to those officers or employees, as provided. The bill also would require a local educational agency to update its model policy by March 1, 2026, and to make the policy available to the State Department of Education upon request. By imposing additional duties on local educational agencies, the bill would impose a state-mandated local program.
+(3)This bill would make these provisions severable.
+(4)The California Constitution requires the state to reimburse local agencies and school districts for certain costs mandated by the state. Statutory provisions establish procedures for making that reimbursement.
+This bill would provide that, if the Commission on State Mandates determines that the bill contains costs mandated by the state, reimbursement for those costs shall be made pursuant to the statutory provisions noted above.
+(5)This bill would declare that it is to take effect immediately as an urgency statute.
+TWO_THIRDS
+NO
+YES
+YES
+YES
+YES
+NO
+NO
+NO
+NO
+NO
+The people of the State of California do enact as follows:
+SECTION 1.
+This act shall be known, and may be cited, as the
+California Safe Haven Schools Act
+.
+SEC. 2.
+(a)The Legislature finds and declares all of the following:
+(1)California is home to 10,600,000 immigrants, with 49 percent of these immigrants coming from Latin America and 41 percent of them born in Asia.
+(2)While over one-half of the state’s immigrants are naturalized as United States citizens, about 1,800,000 of these immigrants are undocumented.
+(3)In the 2017 federal fiscal year, during the first Trump administration, there was a 174-percent increase in deportations of immigrants with no
+criminal record.
+(4)Research shows that the effects of immigration enforcement seriously hurt pupils’ engagement and performance at school. Pupils coming from families with “likely unauthorized immigrants” have as much as a 25.2-percent increase in the probability of dropping out of school as enforcement increases. There is also a direct correlation between increased deportations within a school district and increased chronic absenteeism and achievements in math among pupils.
+(5)When immigration enforcement agencies partner with law enforcement agencies to enforce immigration law, Hispanic pupil enrollment in our public schools is reduced by 7.3 percent. Additionally, these partnerships displace over 300,000 Hispanic pupils as enforcement causes these families to move away or prevents
+families from moving into these communities.
+(6)The United States Supreme Court held in Plyler v. Doe (457 U.S. 202) that denying pupils who are undocumented immigrants a free public education, which is offered to other children who are citizens or documented immigrants, violates the equal protection clause of the Fourteenth Amendment to the United States Constitution.
+(b)Therefore, it is the intent of the Legislature to do all of the following:
+(1)Safeguard pupils’ right to free public education regardless of their, and their families’, immigration status.
+(2)Reaffirm California’s position to provide a safe, secure, and peaceful environment for all
+pupils to learn.
+(3)Declare that local educational agencies shall limit their assistance with immigration enforcement agencies where children and pupils are present to the fullest extent possible, consistent with federal and state law.
+(4)Ensure that immigration enforcement is restricted to areas where children are not present.
+SEC. 3.
+Section 234.7 of the
+Education Code
+is amended to read:
+234.7.
+(a)Except as required by state or federal law, or as required to administer a state or federally supported educational program, school officials and employees of a local educational agency shall not do either of the following:
+(1)Collect information or documents regarding citizenship or immigration status of pupils or their family members.
+(2)Allow an officer or employee of an agency conducting immigration enforcement to
+enter a
+nonpublic area of a schoolsite for any purpose without being presented with a valid judicial warrant or judicial subpoena, or a court order. Any school official or employee of a local educational agency shall, to the extent practicable, request a valid identification from an officer or employee of an agency conducting immigration enforcement seeking to enter a nonpublic area of a schoolsite. This subdivision shall not be construed to limit
+a local educational agency’s or school official’s right to consult with counsel or challenge the validity of a warrant, subpoena, or court order in a court of competent jurisdiction.
+(b)A local educational agency and its
+personnel, to the extent practicable, shall not disclose or provide in writing, verbally, or in any other manner, the education records of or any information about a pupil or a pupil’s family and household without the pupil’s parents’ or guardians’ written consent, a school employee, or a teacher, including, but not limited
+to, personal information as defined in subdivision (a) of Section 1798.3 of the Civil Code, information about a pupil’s home, and information about a pupil’s travel schedule, to an officer or employee of an agency conducting immigration enforcement absent a valid judicial warrant or judicial subpoena, or court order directing the local educational agency or its personnel to do so. Any disclosure of a pupil’s education records pursuant to a valid judicial warrant or judicial subpoena, or court order shall be in accordance with the
+parent notification requirements
+set forth in Section 99.31(a)(9)(ii) of Title 34 of the Code of Federal Regulations.
+(c)The superintendent of a school district, the superintendent of a county office of education, and the principal of a charter school, as applicable, shall report to the respective governing board or body of the local educational agency in a timely manner any requests for information or access to a schoolsite by an officer or employee of a law enforcement agency for the purpose of enforcing the immigration laws in a manner that ensures the confidentiality and privacy of any potentially identifying information.
+(d)If an employee of a school is aware that a pupil’s parent or guardian is not available to care for the pupil, the school
+shall first exhaust any parental instruction relating to the pupil’s care in the emergency contact information it has for the pupil to arrange for the pupil’s care. A school is encouraged to work with parents or guardians to update the emergency contact information and not to contact Child Protective Services to arrange for the pupil’s care unless the school is unable to arrange for care through the use of emergency contact information or other information or instructions provided by the parent or guardian.
+(e)The governing board or body of a local educational agency shall do both of the following:
+(1)Provide information to parents and guardians, as appropriate, regarding their children’s right to a free public education, regardless of immigration status or religious beliefs. This
+information shall include information relating to “know your rights” immigration enforcement established by the Attorney General and may be provided in the annual notification to parents and guardians pursuant to Section 48980 or any other cost-effective means determined by the local educational agency.
+(2)Educate pupils about the negative impact of bullying other pupils based on their actual or perceived immigration status or their religious beliefs and customs.
+(f)This section does not prohibit the governing board or body of a local educational agency from establishing stronger standards and protections.
+(g)(1)The Attorney General, by April 1, 2018, in consultation with the appropriate
+stakeholders, shall publish model policies limiting assistance with immigration enforcement at public schools, to the fullest extent possible consistent with federal and state law, and ensuring that public schools remain safe and accessible to all California residents, regardless of immigration status. The Attorney General shall, at a minimum, consider all of the following issues when developing the model policies:
+(A)Procedures related to requests for access to school grounds for purposes related to immigration enforcement.
+(B)Procedures for local educational agency employees to notify the superintendent of the school district or their designee, the
+superintendent of the county office of education or their designee, or the principal of the charter school or their designee, as applicable, if an individual requests or gains access to school grounds for purposes related to immigration enforcement.
+(C)Procedures for responding to requests for personal information about pupils or their family members for purposes of immigration enforcement.
+(2)The Attorney General shall, no later than December 1, 2025, update the model policies described in paragraph (1) to ensure that these policies align with the prohibition applicable to school officials and employees of local educational agencies as described in paragraph (2) of subdivision (a), and the requirements for local educational agencies, as described in this
+section.
+(3)Notwithstanding the rulemaking provisions of the Administrative Procedure Act (Chapter 3.5 (commencing with Section 11340) of Part 1 of Division 3 of Title 2 of the Government Code), the Department of Justice may implement, interpret, or make specific this section without taking any regulatory action.
+(h)All local educational agencies shall adopt the model policies developed pursuant to paragraph (1) of subdivision (g), or equivalent policies, by July 1, 2018, and shall update those policies to align with this section, including paragraph (2) of subdivision (g), by March 1, 2026.
+(i)This section does not prohibit or restrict any governmental entity or official from sending to, or receiving from, federal immigration
+authorities, information regarding the citizenship or immigration status, lawful or unlawful, of an individual, or from requesting from federal immigration authorities immigration status information, lawful or unlawful, of any individual, or maintaining or exchanging that information with any other federal, state, or local governmental entity, pursuant to Sections 1373 and 1644 of Title 8 of the United States Code.
+(j)A local educational agency shall maintain its policy adopted pursuant to subdivision (h) and make the policy available to the department upon request.
+(k)Local educational agencies may be subject to monitoring and auditing by the department to ensure compliance with the requirements of subdivisions (h) and (j).
+(l)For purposes of this section, the following definitions apply:
+(1)“Immigration enforcement” includes any and all efforts to investigate, enforce, or assist in the investigation or enforcement of any federal civil immigration law, and any and all efforts to investigate, enforce, or assist in the investigation or enforcement of any federal criminal immigration law that penalizes a person’s presence in, entry, or reentry to, or employment in, the United States.
+(2)“Local educational agency” means a school
+district, county office of education, or charter school.
+(3)“Schoolsite” means an individual school campus of a school district, county office of education, or charter school, an area where a local educational agency’s school-sponsored activity is currently being held, or a schoolbus or other transportation provided by a local educational agency.
+SEC. 4.
+The provisions of this act are severable. If any provision of this act or its application is held invalid, that invalidity shall not affect other provisions or applications that can be given effect without the invalid provision or application.
+SEC. 5.
+If the Commission on State Mandates determines that this act contains costs mandated by the state, reimbursement to local agencies and school districts for those costs shall be made pursuant to Part 7 (commencing with Section 17500) of Division 4 of Title 2 of the Government Code.
+SEC. 6.
+This act is an urgency statute necessary for the immediate preservation of the public peace, health, or safety within the meaning of Article IV of the California Constitution and shall go into immediate effect. The facts constituting the necessity are:
+According to the Migration Policy Institute, 133,000 children between 3 and 17 years of age who are undocumented are enrolled in California public schools, and 750,000 students in kindergarten and grades 1 to 12, inclusive, have at
+least one parent who is undocumented. In order to ensure, as soon as possible, that these students and their families do not face fear, uncertainty, and potential disruptions to their education, and that schools remain safe havens where all children, regardless of immigration status, can learn and thrive without fear of enforcement actions, it is necessary that this act take effect immediately.

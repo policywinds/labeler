@@ -1,0 +1,171 @@
+20250SB__093493CHP
+93
+INTRODUCED
+2026-01-29
+AMENDED_SENATE
+2026-03-19
+AMENDED_SENATE
+2026-05-14
+AMENDED_ASSEMBLY
+2026-06-03
+AMENDED_ASSEMBLY
+2026-08-13
+PASSED_ASSEMBLY
+2026-08-19
+PASSED_SENATE
+2026-08-20
+ENROLLED
+2026-08-24
+CHAPTERED
+2026-09-26
+APPROVED
+2026-09-26
+FILED
+2026-09-26
+2025
+0
+SB
+934
+CHP
+2026
+CHP
+0
+469
+Introduced by Senator Wiener
+(Principal coauthor: Assembly Member Lee)
+(Coauthors: Senators Cabaldon, Cervantes, Durazo, Gonzalez, Laird, Menjivar, Padilla, Pérez, Smallwood-Cuevas, and Wahab)
+(Coauthors: Assembly Members Bauer-Kahan, Bonta, Elhawary, Mark González, Haney, Jackson, Solache, Ward, Wilson, Zbur, and Lowenthal)
+LEAD_AUTHOR
+SENATE
+Wiener
+PRINCIPAL_COAUTHOR
+ASSEMBLY
+Lee
+COAUTHOR
+SENATE
+Cabaldon
+COAUTHOR
+SENATE
+Cervantes
+COAUTHOR
+SENATE
+Durazo
+COAUTHOR
+SENATE
+Gonzalez
+COAUTHOR
+SENATE
+Laird
+COAUTHOR
+SENATE
+Menjivar
+COAUTHOR
+SENATE
+Padilla
+COAUTHOR
+SENATE
+Pérez
+COAUTHOR
+SENATE
+Smallwood-Cuevas
+COAUTHOR
+SENATE
+Wahab
+COAUTHOR
+ASSEMBLY
+Bauer-Kahan
+COAUTHOR
+ASSEMBLY
+Bonta
+COAUTHOR
+ASSEMBLY
+Elhawary
+COAUTHOR
+ASSEMBLY
+Mark González
+COAUTHOR
+ASSEMBLY
+Haney
+COAUTHOR
+ASSEMBLY
+Jackson
+COAUTHOR
+ASSEMBLY
+Solache
+COAUTHOR
+ASSEMBLY
+Ward
+COAUTHOR
+ASSEMBLY
+Wilson
+COAUTHOR
+ASSEMBLY
+Zbur
+COAUTHOR
+ASSEMBLY
+Lowenthal
+An act to amend Sections 865, 865.1, and 865.2 of the Business and Professions Code, relating to sexual orientation or gender identity change efforts.
+sexual orientation or gender identity change efforts
+Sexual orientation or gender identity change efforts.
+Existing law defines “sexual orientation change efforts” as practices by mental health providers that seek to change an individual’s sexual orientation, as specified. Existing law prohibits a mental health provider, as defined, from engaging in sexual orientation change efforts with a patient under 18 years of age, and provides that such efforts attempted by a mental health provider are considered unprofessional conduct and must subject the mental health provider to discipline by that
+provider’s licensing entity.
+This bill would define “sexual orientation or gender identity change efforts” as any practices of a licensed mental health provider that
+seek, during the provision of mental health services, to direct a patient toward a predetermined sexual orientation or gender identity, as specified, and would apply the prohibitions described above to such efforts. The bill would exclude specified practices, including age-appropriate interventions to address unlawful conduct or unsafe practices that do not seek to direct the patient toward a particular sexual orientation or gender identity, from this definition.
+MAJORITY
+NO
+YES
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+The people of the State of California do enact as follows:
+SECTION 1.
+The Legislature finds and declares:
+(a)The American Psychological Association, the American Psychiatric Association, the American Academy of Pediatrics, the American Medical Association, the American Counseling Association, the American Academy of Child and Adolescent Psychiatry, the American School Counselor Association, the National Association of Social Workers, and every other mainstream mental health and medical organization in the United States have determined that efforts to change an individual’s sexual orientation or gender
+identity, which is a person’s internal understanding of their gender, are harmful and ineffective.
+(b)In 2009, the American Psychological Association Task Force on Appropriate Therapeutic Responses to Sexual Orientation conducted a systematic review of peer-reviewed research and concluded that sexual orientation change efforts are unlikely to be successful and involve some risk of harm, including depression, suicidality, and anxiety.
+(c)In 2021, the American Psychological Association (APA) adopted resolutions on sexual orientation change efforts (SOCE) and gender identity change efforts (GICE) concluding that SOCE and GICE are harmful and ineffective and calling for their elimination. The APA stated that “consistent with the APA definition of evidence-based practice, the APA affirms that scientific evidence and clinical experience indicate that SOCE put individuals at significant risk of harm.” The APA also stated that “consistent with the APA definition of evidence-based practice, the APA affirms that scientific evidence and clinical experience indicate that GICE put individuals at significant risk of harm.”
+(d)The American Academy of Pediatrics has stated that “therapy directed at specifically changing sexual orientation is contraindicated, since it can provoke
+guilt and anxiety while having little or no potential for achieving changes in orientation.”
+(e)In 2023, the United States Joint Statement (USJS) Against Conversion Efforts was ratified. The USJS is a consensus statement of 28 professional medical and mental health associations. Signatories to the USJS include the American Academy of Child and Adolescent Psychiatry, American Academy of Family Physicians, American Academy of Nursing, American Academy of Pediatrics, American Association for Marriage and Family Therapy, American College of Physicians, American Counseling Association, American Medical Association, American Psychiatric Association, American Psychoanalytic Association, American Psychological Association, Clinical Social Work Association, and National Association of Social Workers, among others. The USJS states that “[d]ecades of research
+findings and clinical expertise have revealed that variations in sexual orientation and gender identity are a normal part of human development across race, ethnicity, and socioeconomic status” and that “[r]esearch and experience shared by scholars, clinicians, and patients have shown conversion efforts have not changed sexual orientation or gender identity or expression and are harmful.”
+(f)The World Professional Association for Transgender Health, the American Medical Association, and the American Psychological Association recognize that
+being transgender is not a disorder and that efforts to change an individual’s gender identity are harmful.
+(g)The scientific and clinical consensus establishes that sexual orientation or gender identity change efforts pose serious risks of harm to patients, including depression, guilt, helplessness, hopelessness, shame, social withdrawal, suicidality, substance abuse, stress, self-blame, decreased self-esteem, feelings of anger and betrayal, loss of religious faith, alienation from family, problems in sexual and emotional intimacy, sexual dysfunction, high-risk
+sexual behaviors, feelings of being dehumanized, and a sense of having wasted time and resources.
+(h)The psychological harms caused by sexual orientation or gender identity change efforts often do not manifest until years or decades after the conduct occurred. Survivors frequently do not recognize their experience as conversion therapy, initially fail to recognize such treatment as harmful, fail to connect their psychological injuries to the treatment until much later in life, or are deterred from coming forward by shame instilled by the treatment itself.
+SEC. 2.
+Section 865 of the
+Business and Professions Code
+is amended to read:
+865.
+For the purposes of this article, the following terms   shall have the following meanings:
+(a)“Mental health provider” means a physician and surgeon specializing in the practice of psychiatry, a psychologist, a psychological assistant, intern, or trainee, a licensed marriage and family therapist, a registered associate marriage and family therapist, a marriage and family therapist trainee, a licensed educational psychologist, a credentialed school psychologist, a licensed clinical social worker, an associate clinical social worker, a clinical social work intern, a licensed professional clinical counselor, a
+registered associate clinical counselor, a professional clinical counselor trainee, or any other person designated as a mental health professional under California law or regulation.
+(b)(1)“Sexual orientation or gender identity change efforts” means any practices of a licensed mental health provider that seek, during the provision of mental health services, to direct a patient toward a predetermined sexual orientation or gender identity outcome. Such efforts include, regardless of the direction of the intended change, either of the following:
+(A)Efforts to direct a patient toward a
+particular sexual orientation by reducing or increasing sexual or romantic attractions or feelings toward individuals of a particular sex.
+(B)Efforts to direct a patient toward a particular gender identity by suppressing or constraining the patient’s gender identity or expression.
+(2)“Sexual orientation or gender identity change efforts” does not include any of the following practices:
+(A)Nondirective psychotherapies that facilitate a patient’s coping, identity exploration, and self-understanding without seeking to achieve any particular outcome regarding sexual orientation or gender identity.
+(B)Age-appropriate interventions to address unlawful conduct or unsafe practices that do not seek to direct the patient toward any particular sexual orientation or gender identity.
+(C)Counseling, psychotherapy, or other supportive services, provided in a manner consistent with the applicable standards of care, that respects the gender identity of the patient, as experienced and defined by the patient.
+SEC. 3.
+Section 865.1 of the
+Business and Professions Code
+is amended to read:
+865.1.
+A mental health provider may not engage in sexual orientation or gender identity change efforts with a patient under 18 years of
+age under any circumstances.
+SEC. 4.
+Section 865.2 of the
+Business and Professions Code
+is amended to read:
+865.2.
+Any sexual orientation or gender identity change efforts attempted on a patient under 18 years of age by a mental health provider shall be considered unprofessional conduct and shall subject the mental health provider to discipline by the licensing entity for that mental health provider.
+SEC. 5.
+The provisions of this act are severable. If any provision of this act or its application is held invalid, that invalidity shall not affect other provisions or applications that can be given effect without the invalid provision or application.

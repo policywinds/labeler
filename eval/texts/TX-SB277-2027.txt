@@ -1,0 +1,80 @@
+90(R) SB 277 - Introduced version - Bill Text
+90R304 LHC-D
+By: Blanco
+S.B. No. 277
+A BILL TO BE ENTITLED
+AN ACT
+relating to the eligibility to participate in certain drug court
+programs.
+BE IT ENACTED BY THE LEGISLATURE OF THE STATE OF TEXAS:
+SECTION 1. Section 123.002, Government Code, is amended to
+read as follows:
+Sec. 123.002. AUTHORITY TO ESTABLISH PROGRAM; ELIGIBILITY.
+(a) The commissioners court of a county or governing body of a
+municipality may establish the following types of drug court
+programs:
+(1) drug courts for persons arrested for, charged
+with, or convicted of:
+(A) an offense in which an element of the offense
+is the use or possession of alcohol or the use, possession, or sale
+of a controlled substance, a controlled substance analogue, or
+marihuana; or
+(B) an offense in which the use of alcohol or a
+controlled substance is suspected to have significantly
+contributed to the commission of the offense and the offense did not
+involve:
+(i) carrying, possessing, or using a
+firearm or other dangerous weapon;
+(ii) the use of force against the person of
+another; or
+(iii) the death of or serious bodily injury
+to another;
+(2) drug courts for juveniles detained for, taken into
+custody for, or adjudicated as having engaged in:
+(A) delinquent conduct, including habitual
+felony conduct, or conduct indicating a need for supervision in
+which an element of the conduct is the use or possession of alcohol
+or the use, possession, or sale of a controlled substance, a
+controlled substance analogue, or marihuana; or
+(B) delinquent conduct, including habitual
+felony conduct, or conduct indicating a need for supervision in
+which the use of alcohol or a controlled substance is suspected to
+have significantly contributed to the commission of the conduct,
+subject to Subsections (b) and (c) [deleted: and the conduct did not involve: (i) carrying, possessing, or using a firearm or other dangerous weapon; (ii) the use of force against the person of another; or (iii) the death of or serious bodily injury to another];
+(3) reentry drug courts for persons with a
+demonstrated history of using alcohol or a controlled substance who
+may benefit from a program designed to facilitate the person's
+transition and reintegration into the community on release from a
+state or local correctional facility;
+(4) family dependency drug treatment courts for family
+members involved in a suit affecting the parent-child relationship
+in which a parent's use of alcohol or a controlled substance is a
+primary consideration in the outcome of the suit; or
+(5) programs for other persons not precisely described
+by Subdivisions (1)-(4) who may benefit from a program that has the
+essential characteristics described by Section 123.001.
+(b) Unless the attorney representing the state consents to
+the participation in the applicable drug court program, a juvenile
+is not eligible to participate in a drug court program established
+under Subsection (a)(2) for conduct described by Subsection
+(a)(2)(B) involving:
+(1) carrying, possessing, or using a firearm or other
+dangerous weapon; or
+(2) serious bodily injury to another.
+(c) A juvenile is not eligible to participate in a drug
+court program established under Subsection (a)(2) for conduct
+described by Subsection (a)(2)(B) involving the death of another.
+SECTION 2. Section 123.006(a), Government Code, is amended
+to read as follows:
+(a) The commissioners court of a county with a population of
+more than 200,000 shall:
+(1) establish a drug court program under Section
+123.002(a)(1) [deleted: 123.002(1)]; and
+(2) direct the judge, magistrate, or coordinator to
+comply with Section 121.002(c)(1).
+SECTION 3. The change in law made by this Act applies to a
+juvenile who enters a drug court program under Chapter 123,
+Government Code, regardless of whether the juvenile engaged in the
+conduct for which the juvenile enters the program before, on, or
+after the effective date of this Act.
+SECTION 4. This Act takes effect September 1, 2027.

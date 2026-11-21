@@ -1,0 +1,61 @@
+20250AB__197899INT
+99
+INTRODUCED
+2026-02-13
+2025
+0
+AB
+1978
+INT
+Introduced by Assembly Member Johnson
+LEAD_AUTHOR
+ASSEMBLY
+Johnson
+An act to add Section 3040.1 of the Family Code, relating to family law.
+family law
+California Equal Shared Parenting Act.
+Existing law provides that it is the public policy of this state to ensure that children have frequent and continuing contact with both parents after the parents have ended their relationship, and to encourage parents to share the rights and responsibilities of child rearing in order to effect this policy, except where the contact would not be in the best interest of the child, as specified. Existing law provides for proceedings to determine the custody of a child, and establishes a presumption, affecting the burden of proof, that joint custody is in the best interest of a minor child, as specified.
+This bill would, for child custody proceedings filed on or after January 1, 2027, establish a rebuttable presumption that equal parenting time is in the best interest of the child if (1) both parents are found fit, willing, and able to parent and (2)
+both parents reside within 25 miles of the child’s primary school or educational institution. The bill would authorize the court to deny equal parenting time if it finds by clear and convincing evidence that shared parenting time is not in the interest of the child due to circumstances that are detrimental to the child, including, but not limited to, a history of substantiated domestic abuse. The bill would require any decision to deny equal parenting time to be substantiated in writing and specify the evidence relied upon.
+MAJORITY
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+The people of the State of California do enact as follows:
+SECTION 1.
+This act shall be known, and may be cited, as the
+California Equal Shared Parenting Act
+.
+California Equal Shared Parenting Act
+SEC. 2.
+The Legislature finds and declares the following:
+(a)The policy of the State of California is to assure children frequent and continuing contact with both parents after the parents have separated or dissolved their marriage.
+(b)Children benefit from equal parenting time with both fit parents, provided it is practical and safe.
+(c)Equal parenting time minimizes conflict, reduces litigation, and promotes a cooperative parenting environment.
+(d)Establishing a rebuttable presumption of equal parenting time provides predictability, fairness, and
+supports the child’s right to a full relationship with both parents.
+SEC. 3.
+Section 3040.1 is added to the
+Family Code
+, to read:
+3040.1.
+(a)Notwithstanding any other law, in any proceeding under this part involving the right to custody of a minor child, there is a rebuttable presumption that equal parenting time is in the best interest of the child if all of the following apply:
+(1)Both parents are found to be fit, willing, and able to parent.
+(2)Both parents reside within 25 miles of the child’s primary school or educational institution.
+(b)The presumption may be rebutted only by clear and convincing evidence that equal parenting time is not in the best interest of the child due to circumstances that are detrimental to the child, including, but
+not limited to, any of the following:
+(1)A history of substantiated domestic violence, child abuse, or neglect.
+(2)A pattern of substance abuse or mental illness impairing parental capacity.
+(3)A demonstrated refusal to support the child’s relationship with the other parent.
+(4)Logistical barriers that make equal time impractical due to distance or inflexibility.
+(c)Any decision to deny equal parenting time pursuant to this section shall be made in writing by the court and specify the evidence relied upon and the reasons equal parenting time is not in the child’s best interest.
+(d)“Equal parenting time” means a
+substantially equal division of custodial overnights throughout the year, allowing reasonable adjustments for school schedules, holidays, and special circumstances, provided each parent receives no less than 45 percent of overnights annually.
+(e)This section shall apply to all child custody proceedings filed on or after January 1, 2027.

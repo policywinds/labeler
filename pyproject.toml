@@ -1,0 +1,51 @@
+[project]
+name = "policywinds-labeler"
+version = "0.1.0"
+description = "Labels US bills by policy topic and by which way they move each topic's fixed measure, with checked quotes"
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+authors = [{ name = "Kernelcraft LLC" }]
+requires-python = ">=3.13"
+dependencies = [
+    "anthropic>=2.12.0",
+    "httpx>=0.28",
+    "openai>=1.60",
+    "pydantic>=2.10",
+    "pypdf>=7.0.1",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Topic :: Text Processing :: Linguistic",
+    "Intended Audience :: Science/Research",
+]
+
+[project.urls]
+Homepage = "https://policywinds.com"
+Source = "https://github.com/policywinds/labeler"
+Issues = "https://github.com/policywinds/labeler/issues"
+
+[dependency-groups]
+dev = ["pytest>=9.2.0", "ruff>=0.17.4"]
+
+[tool.uv.build-backend]
+module-name = "policywinds_labeler"
+
+[build-system]
+requires = ["uv_build>=0.13.7,<0.14.0"]
+build-backend = "uv_build"
+
+[tool.ruff]
+line-length = 120
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "S", "BLE"]
+ignore = ["S101", "E501"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S"]
+"eval/**" = ["S"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

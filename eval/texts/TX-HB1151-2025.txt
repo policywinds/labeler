@@ -1,0 +1,218 @@
+89(R) HB 1151 - Enrolled version - Bill Text
+H.B. No. 1151
+AN ACT
+relating to neglect of a child and the grounds for termination of
+the parent-child relationship and possession of a child by the
+Department of Family and Protective Services.
+BE IT ENACTED BY THE LEGISLATURE OF THE STATE OF TEXAS:
+SECTION 1. Section 161.001(c), Family Code, is amended to
+read as follows:
+(c) Evidence of one or more of the following does not
+constitute clear and convincing evidence sufficient for a court to
+make a finding under Subsection (b) and order termination of the
+parent-child relationship:
+(1) the parent homeschooled the child;
+(2) the parent is economically disadvantaged;
+(3) the parent has been charged with a nonviolent
+misdemeanor offense other than:
+(A) an offense under Title 5, Penal Code;
+(B) an offense under Title 6, Penal Code; or
+(C) an offense that involves family violence, as
+defined by Section 71.004 of this code;
+(4) the parent provided or administered low-THC
+cannabis to a child for whom the low-THC cannabis was prescribed
+under Chapter 169, Occupations Code;
+(5) the parent declined immunization for the child for
+reasons of conscience, including a religious belief;
+(6) the parent sought an opinion from more than one
+medical provider relating to the child's medical care, transferred
+the child's medical care to a new medical provider, or transferred
+the child to another health care facility; [deleted: or]
+(7) the parent allowed the child to engage in
+independent activities that are appropriate and typical for the
+child's level of maturity, physical condition, developmental
+abilities, or culture;
+(8) the parent refused to administer or consent to the
+administration of a psychotropic medication to the child, or to
+consent to any other psychiatric or psychological treatment of the
+child, unless the refusal:
+(A) presents a substantial risk of death,
+disfigurement, or bodily injury to the child; or
+(B) results in an observable and material
+impairment to the growth, development, or functioning of the child;
+or
+(9) the parent chose a recognized alternative health
+care treatment or therapy for the child that could be considered as
+new, emerging, or nonstandard, unless the treatment or therapy:
+(A) presents a substantial risk of death,
+disfigurement, or bodily injury to the child; or
+(B) results in an observable and material
+impairment to the growth, development, or functioning of the child.
+SECTION 2. Section 261.001(4), Family Code, is amended to
+read as follows:
+(4) "Neglect" means an act or failure to act by a
+person responsible for a child's care, custody, or welfare
+evidencing the person's blatant disregard for the consequences of
+the act or failure to act that results in harm to the child or that
+creates an immediate danger to the child's physical health or
+safety and:
+(A) includes:
+(i) the leaving of a child in a situation
+where the child would be exposed to an immediate danger of physical
+or mental harm, without arranging for necessary care for the child,
+and the demonstration of an intent not to return by a parent,
+guardian, or managing or possessory conservator of the child;
+(ii) the following acts or omissions by a
+person:
+(a) placing a child in or failing to
+remove a child from a situation that a reasonable person would
+realize requires judgment or actions beyond the child's level of
+maturity, physical condition, or mental abilities and that results
+in bodily injury or an immediate danger of harm to the child;
+(b) failing to seek, obtain, or follow
+through with medical care for a child, with the failure resulting in
+or presenting an immediate danger of death, disfigurement, or
+bodily injury or with the failure resulting in an observable and
+material impairment to the growth, development, or functioning of
+the child;
+(c) the failure to provide a child
+with food, clothing, or shelter necessary to sustain the life or
+health of the child, excluding failure caused primarily by
+financial inability unless relief services had been offered and
+refused;
+(d) placing a child in or failing to
+remove the child from a situation in which the child would be
+exposed to an immediate danger of sexual conduct harmful to the
+child; or
+(e) placing a child in or failing to
+remove the child from a situation in which the child would be
+exposed to acts or omissions that constitute abuse under
+Subdivision (1)(E), (F), (G), (H), or (K) committed against another
+child;
+(iii) the failure by the person responsible
+for a child's care, custody, or welfare to permit the child to
+return to the child's home without arranging for the necessary care
+for the child after the child has been absent from the home for any
+reason, including having been in residential placement or having
+run away; or
+(iv) a negligent act or omission by an
+employee, volunteer, or other individual working under the auspices
+of a facility or program, including failure to comply with an
+individual treatment plan, plan of care, or individualized service
+plan, that causes or may cause substantial emotional harm or
+physical injury to, or the death of, a child served by the facility
+or program as further described by rule or policy; and
+(B) does not include:
+(i) the refusal by a person responsible for
+a child's care, custody, or welfare to permit the child to remain in
+or return to the child's home resulting in the placement of the
+child in the conservatorship of the department if:
+(a) the child has a severe emotional
+disturbance;
+(b) the person's refusal is based
+solely on the person's inability to obtain mental health services
+necessary to protect the safety and well-being of the child; and
+(c) the person has exhausted all
+reasonable means available to the person to obtain the mental
+health services described by Sub-subparagraph (b);
+(ii) allowing the child to engage in
+independent activities that are appropriate and typical for the
+child's level of maturity, physical condition, developmental
+abilities, or culture; [deleted: or]
+(iii) a decision by a person responsible
+for a child's care, custody, or welfare to:
+(a) obtain an opinion from more than
+one medical provider relating to the child's medical care;
+(b) transfer the child's medical care
+to a new medical provider; or
+(c) transfer the child to another
+health care facility;
+(iv) the refusal by a person responsible
+for a child's care, custody, or welfare to administer or consent to
+the administration of a psychotropic medication to the child, or to
+consent to any other psychiatric or psychological treatment of the
+child, unless the refusal:
+(a) presents a substantial risk of
+death, disfigurement, or bodily injury to the child; or
+(b) results in an observable and
+material impairment to the growth, development, or functioning of
+the child; or
+(v) choosing a recognized alternative
+health care treatment or therapy for the child that could be
+considered as new, emerging, or nonstandard, unless the treatment
+or therapy:
+(a) presents a substantial risk of
+death, disfigurement, or bodily injury to the child; or
+(b) results in an observable and
+material impairment to the growth, development, or functioning of
+the child.
+SECTION 3. Section 262.116(a), Family Code, is amended to
+read as follows:
+(a) The Department of Family and Protective Services may not
+take possession of a child under this subchapter based on evidence
+that the parent:
+(1) homeschooled the child;
+(2) is economically disadvantaged;
+(3) has been charged with a nonviolent misdemeanor
+offense other than:
+(A) an offense under Title 5, Penal Code;
+(B) an offense under Title 6, Penal Code; or
+(C) an offense that involves family violence, as
+defined by Section 71.004 of this code;
+(4) provided or administered low-THC cannabis to a
+child for whom the low-THC cannabis was prescribed under Chapter
+169, Occupations Code;
+(5) declined immunization for the child for reasons of
+conscience, including a religious belief;
+(6) sought an opinion from more than one medical
+provider relating to the child's medical care, transferred the
+child's medical care to a new medical provider, or transferred the
+child to another health care facility;
+(7) allowed the child to engage in independent
+activities that are appropriate and typical for the child's level
+of maturity, physical condition, developmental abilities, or
+culture; [deleted: or]
+(8) tested positive for marihuana, unless the
+department has evidence that the parent's use of marihuana has
+caused significant impairment to the child's physical or mental
+health or emotional development;
+(9) refused to administer or consent to the
+administration of a psychotropic medication to the child, or to
+consent to any other psychiatric or psychological treatment of the
+child, unless the refusal:
+(A) presents a substantial risk of death,
+disfigurement, or bodily injury to the child; or
+(B) results in an observable and material
+impairment to the growth, development, or functioning of the child;
+or
+(10) chose a recognized alternative health care
+treatment or therapy for the child that could be considered as new,
+emerging, or nonstandard, unless the treatment or therapy:
+(A) presents a substantial risk of death,
+disfigurement, or bodily injury to the child; or
+(B) results in an observable and material
+impairment to the growth, development, or functioning of the child.
+SECTION 4. The changes in law made by this Act apply only to
+a suit filed by the Department of Family and Protective Services on
+or after the effective date of this Act. A suit filed by the
+department before that date is governed by the law in effect on the
+date the suit was filed, and the former law is continued in effect
+for that purpose.
+SECTION 5. This Act takes effect September 1, 2025.
+______________________________
+______________________________
+President of the Senate
+Speaker of the House
+I certify that H.B. No. 1151 was passed by the House on April
+16, 2025, by the following vote: Yeas 145, Nays 1, 1 present, not
+voting.
+______________________________
+Chief Clerk of the House
+I certify that H.B. No. 1151 was passed by the Senate on May
+14, 2025, by the following vote: Yeas 31, Nays 0.
+______________________________
+Secretary of the Senate
+APPROVED: _____________________
+Date
+_____________________
+Governor

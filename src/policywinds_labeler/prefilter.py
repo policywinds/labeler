@@ -1,7 +1,22 @@
+# Copyright 2026 Kernelcraft LLC (PolicyWinds)
+# SPDX-License-Identifier: Apache-2.0
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 """Free keyword prefilter over title + description. Tuned for recall; ranks candidates per topic.
 
 `score` decides which bills a model ever reads; `windows` cuts the parts of a bill's text it is shown. Bills whose
-title hides the subject are caught by a full-text keyword scan in the pipeline."""
+title hides the subject are caught by a full-text keyword scan of the bill text (`hits`)."""
 
 from __future__ import annotations
 
@@ -13,7 +28,7 @@ VERSION = 7  # v2: FL H/S numbering; v3: "conception", "conceived"; v4: custody-
 # Bills and joint resolutions (constitutional amendments). Simple/concurrent resolutions are mostly ceremonial.
 BILL_TYPES = re.compile(r"^(?:HB|SB|HJR|SJR|AB|ACA|SCA)\d+$")
 FEDERAL_TYPES = re.compile(r"^(?:HR|S|HJRES|SJRES)\d+$")  # federal HR is a bill; state HR is a resolution
-# States whose LegiScan numbering differs from the default (FL numbers bills and joint resolutions H1234/S1234).
+# States whose bill numbering differs from the default (FL numbers bills and joint resolutions H1234/S1234).
 # NY: Assembly/Senate bills A1234/S1234 (resolutions are J/K/R/E). VA: HB/SB plus HJ/SJ joint resolutions, which
 # carry constitutional amendments (HJR/SJR spelling is not used there).
 STATE_TYPES = {

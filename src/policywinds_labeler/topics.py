@@ -1,5 +1,20 @@
-"""Seed topic taxonomy (docs/mvp.md section 1). In M1+ the DB `topic` table is the source of truth;
-this module seeds it and is used by the M0 verification command."""
+# Copyright 2026 Kernelcraft LLC (PolicyWinds)
+# SPDX-License-Identifier: Apache-2.0
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+"""Topics and subtags, their definitions, keywords and scope rules, and the fixed measure (direction axis) each
+topic's labels are judged against."""
 
 TOPICS: dict[str, list[str]] = {
     "firearms": [
@@ -43,7 +58,7 @@ TOPICS: dict[str, list[str]] = {
     ],
 }
 
-# Direction axis per topic (docs/mvp.md, AI pipeline). Neutral wording: "expands" and "restricts" refer
+# Direction axis per topic. Neutral wording: "expands" and "restricts" refer
 # to the axis below, not to either side's framing. Users pick which direction they want alerts on.
 # Short public URL segment per topic (/guns, /tx/guns). Topics without an entry use their tag. Must not be a
 # two-letter state code or a reserved site path (checked in tests).
@@ -232,7 +247,7 @@ KEYWORD_EXCLUDE: dict[str, list[str]] = {
         r"home ?school",
         r"vital records?|death records?",
         r"divorce; (?:grounds|cruelty)",  # Virginia divorce-grounds bills (no custody or support change)
-        # State-filed cases (parents against the state; see docs/topics-backlog.md) and other out-of-scope terms
+        # State-filed cases (parents against the state) and other out-of-scope terms
         r"governmental entit",
         r"attorneys? ad litem",
         r"removal and placement",

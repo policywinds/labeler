@@ -1,0 +1,31 @@
+90(R) SB 193 - Introduced version - Bill Text
+90R798 AMF-D
+By: Hall, Hagenbuch
+S.B. No. 193
+A BILL TO BE ENTITLED
+AN ACT
+relating to evidence in certain civil actions that entry on a
+property by a license holder with a concealed handgun was
+forbidden.
+BE IT ENACTED BY THE LEGISLATURE OF THE STATE OF TEXAS:
+SECTION 1. Chapter 95A, Civil Practice and Remedies Code,
+is amended by adding Section 95A.0002 to read as follows:
+Sec. 95A.0002. EVIDENCE OF NOTICE TO FORBID CONCEALED
+HANDGUNS. The fact that a card, sign, or other document described
+by Section 30.06(c)(3), Penal Code, is posted on the property of a
+business or any other evidence that a business owner exercised the
+business owner's option to forbid the carrying of a concealed
+handgun by a license holder on the property:
+(1) is admissible as evidence in a trial on the merits
+in an action:
+(A) against the business owner; and
+(B) in which the cause of action arises from
+serious bodily injury or death arising from a criminal act
+occurring on the property; and
+(2) supports a cause of action described by
+Subdivision (1) against a business owner described by that
+subdivision.
+SECTION 2. Section 95A.0002, Civil Practice and Remedies
+Code, as added by this Act, applies only to an action filed on or
+after the effective date of this Act.
+SECTION 3. This Act takes effect September 1, 2027.

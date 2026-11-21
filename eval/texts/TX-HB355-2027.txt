@@ -1,0 +1,82 @@
+90(R) HB 355 - Introduced version - Bill Text
+90R1013 AJZ-D
+By: Lalani
+H.B. No. 355
+A BILL TO BE ENTITLED
+AN ACT
+relating to the establishment of a program for the issuance of
+digital identification; authorizing a fee.
+BE IT ENACTED BY THE LEGISLATURE OF THE STATE OF TEXAS:
+SECTION 1. Subtitle B, Title 7, Transportation Code, is
+amended by adding Chapter 526 to read as follows:
+CHAPTER 526. DIGITAL IDENTIFICATION PROGRAM
+Sec. 526.0101. DEFINITIONS. In this chapter:
+(1) "Department" and "driver's license" have the
+meanings assigned by Section 521.001.
+(2) "Digital identification" includes a digital
+driver's license, a digital personal identification certificate, a
+digital handgun license, and a digital hunting or fishing license.
+(3) "Handgun license" means a license to carry a
+handgun issued under Subchapter H, Chapter 411, Government Code.
+(4) "Hunting or fishing license" means a noncommercial
+hunting or fishing license of any type issued by the Parks and
+Wildlife Department, including:
+(A) a hunting license issued under Chapter 42,
+Parks and Wildlife Code;
+(B) a fishing license issued under Chapter 46,
+Parks and Wildlife Code; or
+(C) a combination hunting and fishing license
+issued under Chapter 50, Parks and Wildlife Code.
+Sec. 526.0102. DIGITAL IDENTIFICATION PROGRAM. (a) The
+department, in consultation with the Parks and Wildlife Department,
+by rule shall establish a program for the issuance of digital
+identification.
+(b) In establishing the digital identification program, the
+department shall:
+(1) assess existing department infrastructure and
+upgrade department infrastructure according to the department's
+findings;
+(2) provide a digital identification solution that:
+(A) is capable of presenting digital
+identification on a wireless communication device that:
+(i) must include the information included
+on a driver's license, as described by Section 521.121(a); and
+(ii) may include, as applicable:
+(a) the information included on a
+handgun license, as required by Subchapter H, Chapter 411,
+Government Code; and
+(b) the information included on a
+hunting or fishing license, as required by the Parks and Wildlife
+Code, including a stamp or other authorization issued by the Parks
+and Wildlife Department in connection with the hunting or fishing
+license;
+(B) includes an authentication and verification
+process for a wireless communication device; and
+(C) may be used in any location regardless of the
+location's level of wireless connectivity or cellular telephone
+service;
+(3) deploy the digital identification solution; and
+(4) implement any procedures necessary to allow law
+enforcement officials to accept digital identification.
+(c) The department may contract with a third party to
+establish the program described by this section if the cost of the
+contract is covered by the fee authorized under Subsection (d).
+(d) The department may charge a fee of not more than $5 for
+the issuance of digital identification under this section.
+(e) Except as otherwise provided by this subsection or
+federal law, a person shall accept digital identification issued
+under this section as evidence of another person's identity in the
+same manner as a driver's license. Digital identification issued
+under this section may not be used for voting purposes.
+SECTION 2. (a) The Department of Public Safety by rule
+shall establish and implement the digital identification program
+under Chapter 526, Transportation Code, as added by this Act, not
+later than September 1, 2028.
+(b) If before implementing any provision of this Act the
+Department of Public Safety determines that a waiver or
+authorization from a federal agency is necessary for the
+implementation of that provision, the Department of Public Safety
+shall request the waiver or authorization and may delay
+implementing that provision until the waiver or authorization is
+granted.
+SECTION 3. This Act takes effect September 1, 2027.

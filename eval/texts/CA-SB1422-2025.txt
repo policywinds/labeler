@@ -1,0 +1,182 @@
+20250SB__142298AMD
+98
+INTRODUCED
+2026-02-20
+AMENDED_SENATE
+2026-05-14
+2025
+0
+SB
+1422
+AMD
+Introduced by Senator Durazo
+(Principal coauthor: Assembly Member Arambula)
+(Coauthors: Senators Arreguín, Caballero, Cortese, Gonzalez, Menjivar, Reyes, Smallwood-Cuevas, and Wiener)
+(Coauthors: Assembly Members Carrillo, Elhawary, Garcia, Mark González, Harabedian, Kalra, Lee, Ortega, Celeste Rodriguez, and Solache)
+LEAD_AUTHOR
+SENATE
+Durazo
+PRINCIPAL_COAUTHOR
+ASSEMBLY
+Arambula
+COAUTHOR
+SENATE
+Arreguín
+COAUTHOR
+SENATE
+Caballero
+COAUTHOR
+SENATE
+Cortese
+COAUTHOR
+SENATE
+Gonzalez
+COAUTHOR
+SENATE
+Menjivar
+COAUTHOR
+SENATE
+Reyes
+COAUTHOR
+SENATE
+Smallwood-Cuevas
+COAUTHOR
+SENATE
+Wiener
+COAUTHOR
+ASSEMBLY
+Carrillo
+COAUTHOR
+ASSEMBLY
+Elhawary
+COAUTHOR
+ASSEMBLY
+Garcia
+COAUTHOR
+ASSEMBLY
+Mark González
+COAUTHOR
+ASSEMBLY
+Harabedian
+COAUTHOR
+ASSEMBLY
+Kalra
+COAUTHOR
+ASSEMBLY
+Lee
+COAUTHOR
+ASSEMBLY
+Ortega
+COAUTHOR
+ASSEMBLY
+Celeste Rodriguez
+COAUTHOR
+ASSEMBLY
+Solache
+An act to amend Section 14007.8 of the Welfare and Institutions Code, relating to Medi-Cal.
+Medi-Cal
+Medi-Cal: eligibility: immigration status.
+Existing law establishes the Medi-Cal program, which is administered by the State Department of Health Care Services and under which qualified low-income individuals receive health care services. The Medi-Cal program is, in part, governed and funded by federal Medicaid program provisions. Existing law sets a schedule of benefits that are covered by the Medi-Cal program.
+The federal Medicaid program prohibits payment to a state for medical assistance furnished to an alien who is not lawfully admitted for permanent residence or otherwise permanently residing in the United States under color of law. Existing state law extends Medi-Cal eligibility for the full scope of Medi-Cal benefits to individuals who do not have satisfactory immigration status if they are otherwise eligible for those benefits, with the exception of specified dental benefits
+for individuals who are 19 years of age or older. Existing law makes an individual who is 19 years of age or older, who does not have satisfactory immigration status, and who applies for Medi-Cal on or after January 1, 2026, or loses eligibility for eligibility for full-scope Medi-Cal on or after January 1, 2026, eligible only for pregnancy-related services and emergency medical treatment. Existing law, beginning no sooner than July 1, 2027, as specified, requires individuals who do not have satisfactory immigration status, who are not pregnant, and who are 19 to 59 years of age, inclusive, to pay a monthly premium of $30, subject to certain exceptions.
+This bill would require the Director of the Department of Finance to determine and report to the Legislature and the Governor the cost of
+implementing eligibility for the full scope of Medi-Cal benefits for individuals who do not have satisfactory immigration status if they are otherwise eligible, and whether including those costs the General Fund would be in a deficit, as defined. The bill would then, on January 1 of the year following such a determination, end the above-described limitations on services for those who apply for Medi-Cal after January 1, 2026, or who lose eligibility for the full-scope of Medi-Cal benefits on or after January 1, 2026, thereby making an individual who is 19 years of age or older, who does not have satisfactory immigration status, eligible for the full scope of Medi-Cal benefits subject to certain limitations, such as the payment of premiums and certain dental benefits. The bill would require that the implementation of eligibility for the full-scope of Medi-Cal benefits be done by groups categorized by
+age, beginning with individuals over 49 years of age.
+Because counties are required to make Medi-Cal eligibility determinations and this bill would alter Medi-Cal eligibility, the bill would impose a state-mandated local program.
+The California Constitution requires the state to reimburse local agencies and school districts for certain costs mandated by the state. Statutory provisions establish procedures for making that reimbursement.
+This bill would provide that, if the Commission on State Mandates determines that the bill contains costs mandated by the state, reimbursement for those costs shall be made pursuant to the statutory provisions noted above.
+MAJORITY
+NO
+YES
+YES
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+The people of the State of California do enact as follows:
+SECTION 1.
+Section 14007.8 of the
+Welfare and Institutions Code
+is amended to read:
+14007.8.
+(a)(1)An individual who is 25 years of age or younger, and who does not have satisfactory immigration status or is unable to establish satisfactory immigration status as required by Section 14011.2, shall be eligible for the full scope of Medi-Cal benefits, subject to the service limitations described in subdivisions (b), (c), and (k), if they are otherwise eligible for benefits under this chapter.
+(2)(A)After the director determines, and communicates that determination
+in writing to the Department of Finance, that systems have been programmed for implementation of this subparagraph, but no sooner than May 1, 2022, an individual who is 50 years of age or older, and who does not have satisfactory immigration status or is unable to establish satisfactory immigration status as required by Section 14011.2, shall be eligible for the full scope of Medi-Cal benefits, subject to the service limitations described in subdivisions (b), (c), and (k), if they are otherwise eligible for benefits under this chapter.
+(B)After the director determines, and communicates that determination in writing to the Department of Finance, that
+systems have been programmed for implementation of this subparagraph, but no later than January 1, 2024, an individual who is 26 to 49 years of age, inclusive, and who does not have satisfactory immigration status as required by Section 14011.2, shall be eligible for the full scope of Medi-Cal benefits, subject to the service limitations described in subdivisions (b), (c), and (k), if they are otherwise eligible for benefits under this chapter.
+(b)(1)No sooner than January 1, 2026, an individual who is 19 years of age or older, who does not have satisfactory immigration status as required by Section 14011.2,
+who is otherwise eligible for Medi-Cal services pursuant to subdivision (d) of Section 14007.5, and who applies for Medi-Cal on or after January 1, 2026, shall only be eligible for medically necessary pregnancy-related services, and care and services necessary for the treatment of an emergency medical condition and medical care directly related to the emergency, as defined in federal law.
+(2)Notwithstanding paragraph (1), an individual who is 19 years of age or older, who does not have satisfactory immigration status as required by Section 14011.2, who was enrolled in full-scope Medi-Cal and was not pregnant, but loses coverage for full-scope Medi-Cal, shall be eligible to reenroll in full-scope Medi-Cal within three months from the date of disenrollment for full-scope Medi-Cal, pregnancy-only Medi-Cal, or postpartum Medi-Cal. Payment of outstanding premium balances prior to the initiation of the three-month cure
+period shall be a condition of reenrollment under this subdivision for individuals disenrolled from Medi-Cal due to nonpayment of premiums. For purposes of this paragraph, “full-scope Medi-Cal” means the full scope of Medi-Cal benefits, subject to the service limitations described in subdivision (k).
+(3)Paragraphs (1) and (2) shall not apply to nonminor dependents, as defined in Section 11400, and individuals who but for their immigration status are eligible for Medi-Cal pursuant to Section 14005.28. These individuals shall remain eligible for the full scope of Medi-Cal benefits until their 26th birthday.
+(4)Subdivision (b) shall be inoperative in whole or in part as follows:
+(A)(i)On or before August 1, 2027, and each year thereafter until all individuals described
+in subdivision (a) are no longer subject to the service limitations described in this subdivision, the Director of Finance shall annually report to the Governor and the Legislature both of the following:
+(I)The annual General Fund cost of implementing eligibility for the full scope of Medi-Cal benefits for each age group described in subdivision (a) without service limitations described in this subdivision on the following January 1.
+(II)Whether, including the General Fund costs described in subclause (I), the General Fund would be in deficit in the current fiscal year, or any of the following two fiscal years.
+(ii)A report submitted pursuant to this subparagraph shall be submitted in compliance with Section 9795 of the Government Code.
+(B)Notwithstanding paragraphs (1) through (3), inclusive, of this subdivision, or subdivisions (a) or (l), on January 1 of the year following a determination
+that the General Fund would not be in deficit in the current fiscal year, or any of the following two fiscal years, pursuant to subclause (II) of clause (i) of subparagraph (A), the service limitations described in this subdivision shall end for the next group of individuals described in subdivision (a). The individuals described in subdivision (a) shall be grouped by age and the removal of the service limitations described in this subdivision shall proceed in the following order:
+(i)Individuals over 49 years of age.
+(ii)Individuals between 19 and 25 years of age, inclusive.
+(iii)Individuals between 26 and 49 years of age, inclusive.
+(C)No later than 60 days prior to any age group listed in subparagraph (B) no longer being subject to the services limitations described in this subdivision, the department shall post on its internet website which age groups are or are not eligible to enroll in the
+full scope of Medi-Cal benefits and the relevant time periods.
+(D)For the purposes of this subdivision, deficit is defined as a negative balance in the Special Fund for Economic Uncertainties, as provided for in Section 16418 of the Government Code, based on the most recent Department of Finance estimates required by Section 12.5 of Article IV of the California Constitution.
+(c)(1)No sooner than January 1, 2026, if an individual described in subdivision (a) who is 19 years of age or older loses eligibility for full-scope Medi-Cal on or after January 1, 2026, the individual shall only be eligible for medically necessary pregnancy-related services, and care and services necessary for the treatment of an emergency medical condition and medical care directly related to the emergency, as defined in federal law.
+(2)No sooner than January 1,
+2026, notwithstanding paragraph (1), if an individual described in subdivision (a) who is 19 years of age or older loses eligibility for full-scope Medi-Cal while pregnant, the individual shall remain eligible for the full scope of Medi-Cal benefits, subject to the service limitations described in subdivision (k), throughout the pregnancy and for 12 months after the pregnancy ends.
+(3)Paragraphs (1) and (2) shall not apply to nonminor dependents, as defined in Section 11400, and individuals who but for their immigration status are eligible for Medi-Cal pursuant to Section 14005.28. These individuals shall remain eligible for the full scope of Medi-Cal benefits until their 26th birthday.
+(4)Subdivision (c) shall be inoperative in whole or in part as follows:
+(A)(i)On
+or before August 1, 2027, and each year thereafter until all individuals described in subdivisions (a) are no longer subject to the service limitations described in this subdivision, the Director of Finance shall annually report to the Governor and the Legislature both of the following:
+(I)The annual General Fund cost of implementing eligibility for the full scope of Medi-Cal benefits for each age group described in subdivision (a) without service limitations described in this subdivision on the following January 1.
+(II)Whether, including the General Fund costs described in subclause (I), the General Fund would be in deficit in the current fiscal year, or any of the following two fiscal years.
+(ii)A report submitted pursuant to this subparagraph shall be submitted in compliance with Section 9795 of the Government Code.
+(B)Notwithstanding paragraphs (1) through (3), inclusive, of this
+subdivision, or subdivisions (a) or (l), on January 1 of the year following a determination that the General Fund would not be in deficit in the current fiscal year, or any of the following two fiscal years, pursuant to subclause (II) of clause (i) of subparagraph (A), the service limitations described in this subdivision shall end for the next group of individuals described in subdivision (a). The individuals described in subdivision (a) shall be grouped by age and the removal of the service limitations described in this subdivision shall proceed in the following order:
+(i)Individuals over 49 years of age.
+(ii)Individuals between 19 and 25 years of age, inclusive.
+(iii)Individuals between 26 and 49 years of age, inclusive.
+(C)No later than 60 days prior to any age group listed in subparagraph (B) no longer being subject to the services limitations described in this subdivision, the department
+shall post on its internet website which age groups are or are not eligible to enroll in the full scope of Medi-Cal benefits and the relevant time periods.
+(D)For the purposes of this subdivision, deficit is defined as a negative balance in the Special Fund for Economic Uncertainties, as provided for in Section 16418 of the Government Code, based on the most recent Department of Finance estimates required by Section 12.5 of Article IV of the California Constitution.
+(b)</xhtml:p>"?>
+(d)The department shall provide monthly updates to the appropriate policy and fiscal committees of the Legislature
+on the status of the implementation of this section.
+(c)</xhtml:p>"?>
+(e)To the extent permitted by state and federal law, an individual eligible for full-scope Medi-Cal pursuant to subdivision (a) shall be required to enroll in a Medi-Cal managed care health plan. Enrollment in a Medi-Cal managed care health plan shall not preclude a beneficiary from being enrolled in any other children’s Medi-Cal specialty program that they would otherwise be eligible for.
+(d)</xhtml:p>"?>
+(f)(1)The department shall maximize federal financial participation in implementing this section to the extent allowable. For purposes of implementing this section, the department shall claim federal financial participation to the extent that the department determines it is available.
+(2)To the extent that federal financial participation is unavailable, the department shall implement this section using state funds appropriated for this purpose.
+(e)</xhtml:p>"?>
+(g)This section shall be implemented only to the extent it is in compliance with Section 1621(d) of Title 8 of the United States Code.
+(f)</xhtml:p>"?>
+(h)(1)Notwithstanding Chapter 3.5 (commencing with Section 11340) of Part 1 of Division 3 of Title 2 of the Government Code, the department, without taking any further regulatory action, shall implement, interpret, or make specific this section by means of all-county letters, plan letters, plan or provider bulletins, or similar instructions until the time any necessary regulations are adopted. Thereafter, the department shall
+adopt regulations in accordance with the requirements of Chapter 3.5 (commencing with Section 11340) of Part 1 of Division 3 of Title 2 of the Government Code.
+(2)Notwithstanding Section 10231.5 of the Government Code, the department shall provide a status report to the Legislature on a semiannual basis, in compliance with Section 9795 of the Government Code, until regulations have been adopted.
+(g)</xhtml:p>"?>
+(i)In implementing this section, the department may contract, as necessary, on a bid or nonbid basis. This subdivision establishes
+an accelerated process for issuing contracts pursuant to this section. Those contracts, and any other contracts entered into pursuant to this subdivision, may be on a noncompetitive bid basis and shall be exempt from both of the following:
+(1)Part 2 (commencing with Section 10100) of Division 2 of the Public Contract Code and any policies, procedures, or regulations authorized by that part.
+(2)Review or approval of contracts by the Department of General Services.
+(h)</xhtml:p>"?>
+(j)(1)(A)No sooner than July 1, 2027, all individuals described in subdivision (a), except for those individuals described in subparagraph (B), shall be required to pay a monthly premium as a condition of eligibility for Medi-Cal benefits, if they are otherwise eligible for benefits under this chapter.
+(B)The following individuals are not subject to the monthly premium requirements described in subparagraph (A):
+(i)Individuals under 19 years of age.
+(ii)Individuals over 59 years of age.
+(iii)Individuals who are pregnant.
+(2)Monthly premiums
+imposed under this section shall be thirty dollars ($30) per beneficiary.
+(3)An individual described in paragraph (1), after no more than 90 days of nonpayment of the monthly premium, will only be eligible for medically necessary pregnancy-related services, and care and services necessary for the treatment of an emergency medical condition and medical care directly related to the emergency, as defined in federal law. All outstanding premium balances shall be paid in full as a condition of continued eligibility for full-scope Medi-Cal coverage, subject to the service limitations described in subdivision (i).
+(4)The monthly premium requirements and service limitations described in paragraphs (1), (2), and (3) shall not apply to nonminor dependents, as defined in Section 11400, and
+individuals who but for their immigration status are eligible for Medi-Cal pursuant to Section 14005.28. These individuals shall remain eligible for the full scope of Medi-Cal benefits until their 26th birthday.
+(i)</xhtml:p>"?>
+(k)(1)No sooner than July 1, 2026, an individual who is 19 years of age or older, who is eligible for Medi-Cal benefits pursuant to subdivision (a), shall not be eligible for dental services set forth in this chapter, except for the treatment of an emergency medical condition and medical care directly related to the emergency, as defined in federal law.
+(2)Paragraph (1) shall not apply to nonminor dependents, as defined in Section 11400, and individuals who but for their immigration status are eligible for Medi-Cal pursuant to Section 14005.28. These individuals shall remain eligible for the full scope of Medi-Cal benefits until their 26th birthday.
+(l)Subdivisions (b), (c), (j), and (k) shall be implemented only after the director determines, and communicates in writing to the Department of Finance, that systems have been programmed for implementation.
+SEC. 2.
+If the Commission on State Mandates determines that this act contains costs mandated by the state, reimbursement to local agencies and school districts for those costs shall be made pursuant to Part 7 (commencing with Section 17500) of Division 4 of Title 2 of the Government Code.

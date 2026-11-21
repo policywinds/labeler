@@ -1,0 +1,69 @@
+20250AB__130098AMD
+98
+INTRODUCED
+2025-02-21
+AMENDED_ASSEMBLY
+2025-03-28
+2025
+0
+AB
+1300
+AMD
+Introduced by Assembly Member Caloza
+LEAD_AUTHOR
+ASSEMBLY
+Caloza
+An act to add Chapter 17.26 (commencing with Section 7284.3) to Division 7 of Title 1 of the Government Code, relating to privacy.
+privacy
+State and local government: data protection and privacy: immigration.
+Existing law requires the Attorney General to publish model policies limiting assistance with immigration enforcement to the fullest extent possible consistent with federal and state law at public schools, public libraries, health facilities operated by the state or a political subdivision of the state, courthouses, Division of Labor Standards Enforcement facilities, the Agricultural Labor Relations Board, the Division of Workers Compensation, and shelters, and ensuring that they remain safe and accessible to all California residents, regardless of immigration status. Existing law requires the Attorney General to publish guidance, audit criteria, and training recommendations aimed at ensuring that any databases operated by state and local law enforcement agencies, including databases maintained for the
+agency by private vendors, are governed in a manner that limits the availability of information therein to the fullest extent practicable and consistent with federal and state law, to anyone or any entity for the purpose of immigration enforcement.
+Existing law, the California Values Act, prohibits California law enforcement agencies from using agency or department moneys or personnel to investigate, interrogate, detain, detect, or arrest persons for immigration enforcement purposes, including, among other things, providing personal information about an individual, making or intentionally participating in arrests based on civil immigration warrants, or performing the functions of an immigration officer, as specified.
+This bill would prohibit a state or local government agency from collecting immigration-related personally identifiable information unless it is explicitly required by law to do so and the collection is justified by a legitimate government purpose. The bill would prohibit a state or local government agency from sharing personally identifiable information with federal immigration enforcement agencies without a judicial warrant or court order. The bill would require any contract, agreement, or memorandum of understanding that facilitate data sharing between a state or local government agency and federal immigration enforcement authorities to comply with oversight mechanisms to ensure compliance with civil rights and privacy protections and be subject to review by the State Auditor, as described below. Because the bill would require local agencies to perform additional duties, it would impose a state-mandated local program. The bill would make these provisions enforceable by
+administrative action or by imposition of a civil penalty recovered by an action brought by the Attorney General.
+This bill would require the State Auditor to conduct audits of all state and local government agency data-sharing agreements at least every 2 years to ensure compliance with existing laws protecting privacy and civil rights. The bill would require the Office of the Attorney General to establish an oversight task force to review complaints and violations related to unauthorized data collection and sharing that would report to the Legislature annually on data privacy trends, risks, and policy recommendations.
+The California Constitution requires the state to reimburse local agencies and
+school districts for certain costs mandated by the state. Statutory provisions establish procedures for making that reimbursement.
+This bill would provide that, if the Commission on State Mandates determines that the bill contains costs mandated by the state, reimbursement for those costs shall be made pursuant to the statutory provisions noted above.
+Existing law establishes various state government entities and specifies their powers and duties.</xhtml:p><xhtml:p>This bill would state the intent of the Legislature to enact legislation to amend the Government Code, relating to state government.</xhtml:p>"?>
+MAJORITY
+NO
+YES
+YES
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+The people of the State of California do enact as follows:
+SECTION 1.
+Chapter 17.26 (commencing with Section 7284.3) is added to Division 7 of Title 1 of the
+Government Code
+, to read:
+17.26.
+California Data Protection and Privacy for All Communities Act
+7284.3.
+The Legislature finds and declares that the personally identifiable information of individuals who are part of vulnerable communities, particularly immigrants, must be safeguarded against unauthorized access and misuse by federal agencies. While existing laws such as the California Consumer Privacy Act provide foundational protections, further legislative measures are necessary to ensure that state and local government data collection and sharing practices do not compromise the privacy and security of at-risk populations. This chapter strengthens privacy safeguards, enhances regulatory oversight, and aligns data-sharing policies with California’s commitment to civil rights and privacy protections.
+7284.3.1.
+For purposes of this chapter, the following terms, have the following meanings:
+(a)“Government agency” means any state, local, or municipal government entity that collects, stores, or shares personally identifiable information.
+(b)“Immigration enforcement agencies” means United States Immigration and Customs Enforcement (ICE), United States Customs and Border Protection (CBP), and any other federal agency responsible for immigration enforcement.
+(c)“Personally identifiable information” or “PII” includes, but is not limited to, immigration status, biometric data, driver’s license information, employment records, financial
+information, and any other data that can be used to identify an individual.
+7284.3.2.
+(a)A state or local government agency shall not collect immigration-related PII unless it is explicitly required by law to do so and the collection is justified by a legitimate government purpose.
+(b)A state or local government agency shall not share PII with federal immigration enforcement agencies without a judicial warrant or court order.
+(c)Any contract, agreement, or memorandum of understanding that facilitate data sharing between a state or local government agency and federal immigration enforcement authorities shall comply with strict oversight mechanisms that ensure compliance with civil rights and privacy protections and shall be subject to review pursuant to
+Section 7284.3.4.
+(d)This section may be enforced by administrative action or by imposition of a civil penalty recovered by an action brought by the Attorney General.
+7284.3.4.
+The State Auditor shall conduct audits of all state and local government agency data-sharing agreements at least every two years to ensure compliance with existing laws protecting privacy and civil rights.
+7284.3.5.
+(a)The Office of the Attorney General shall establish an oversight task force to review complaints and violations related to unauthorized state and local government agency data collection and sharing.
+(b)(1)Notwithstanding Section 10231.5, the oversight task force shall report to the Legislature annually on data privacy trends, risks, and policy recommendations.
+(2)A report to be submitted pursuant to paragraph (1) shall be submitted in compliance with Section 9795 of the Government Code.
+SEC. 2.
+If the Commission on State Mandates determines that this act contains costs mandated by the state, reimbursement to local agencies and school districts for those costs shall be made pursuant to Part 7 (commencing with Section 17500) of Division 4 of Title 2 of the Government Code.
+<caml:Num>SECTION 1.</caml:Num><caml:Content><xhtml:p>It is the intent of the Legislature to enact legislation to amend the Government Code, relating to state government.</xhtml:p></caml:Content></caml:BillSection>"?>

@@ -1,0 +1,16 @@
+Eval data license
+
+labels.jsonl (the checks, their expected directions and notes) and README.md in this folder are
+Copyright 2026 Kernelcraft LLC (PolicyWinds) and licensed under the Creative Commons Attribution 4.0
+International License (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/legalcode
+Credit: "PolicyWinds labeler eval set, https://github.com/policywinds/labeler".
+
+Not covered by that license:
+
+- texts/: official bill texts published by state legislatures and by the U.S. Government Publishing Office
+  (GovInfo). They are government documents, reproduced unchanged except for conversion to plain text
+  (struck-out text marked "[deleted: ...]"). Each file's source URL is in bills.jsonl.
+- Bill titles, descriptions and sponsor names in bills.jsonl: data from LegiScan (https://legiscan.com),
+  licensed CC BY 4.0, originally published by the legislatures.
+
+The Python scripts in this folder are licensed under Apache-2.0, like the rest of the repository (../LICENSE).

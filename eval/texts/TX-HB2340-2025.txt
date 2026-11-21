@@ -1,0 +1,104 @@
+89(R) HB 2340 - Enrolled version - Bill Text
+H.B. No. 2340
+AN ACT
+relating to the qualifications, communications, and recordkeeping
+of a child custody evaluator and the admissibility of a child
+custody evaluation under certain circumstances.
+BE IT ENACTED BY THE LEGISLATURE OF THE STATE OF TEXAS:
+SECTION 1. Section 107.104(a), Family Code, is amended by
+adding Subdivisions (3) and (4) to read as follows:
+(3) "Developmental disability" has the meaning
+assigned by Section 614.001, Health and Safety Code.
+(4) "Intellectual disability" has the meaning
+assigned by Section 591.003, Health and Safety Code.
+SECTION 2. Section 107.104, Family Code, is amended by
+adding Subsection (f) to read as follows:
+(f) In addition to the qualifications prescribed by this
+section, to be qualified to conduct a child custody evaluation
+under this subchapter, an individual must complete, during the
+two-year period preceding the evaluation, at least three hours of
+initial or continuing training, as applicable, related to the care
+of a child with an intellectual disability or developmental
+disability, including education, therapy, preparation for
+independent living, or methods for addressing physical or mental
+health challenges.
+SECTION 3. Section 107.112, Family Code, is amended by
+amending Subsections (c), (d), and (f) and adding Subsection (i) to
+read as follows:
+(c) Except for records obtained from the department in
+accordance with Section 107.111 or from an entity described by
+Section 107.1111(a) in accordance with Section 107.1111, a private
+child custody evaluator shall, after completion of an evaluation
+and the [deleted: preparation and] filing of a notice [deleted: child custody evaluation report] under Section 107.113(b) [deleted: 107.113], make
+available in a reasonable time the evaluator's records relating to
+the evaluation on the written request of an attorney for a party, a
+party who does not have an attorney, and any person appointed under
+this chapter in the suit in which the evaluator conducted the
+evaluation, unless a court has issued an order restricting
+disclosure of the records.
+(d) Subject to Subsection (b-1) and except for records
+obtained from the department in accordance with Section 107.111 or
+from an entity described by Section 107.1111(a) in accordance with
+Section 107.1111, records relating to a child custody evaluation
+conducted by an employee of or contractor with a domestic relations
+office shall, after completion of the evaluation and the
+[deleted: preparation and] filing of a notice [deleted: child custody evaluation report] under Section 107.113(b) [deleted: 107.113], be made available
+according to the local rules and policies of the office on written
+request of an attorney for a party, a party who does not have an
+attorney, and any person appointed under this chapter in the suit in
+which the evaluator conducted the evaluation, unless a court has
+issued an order restricting disclosure of the records [deleted: according to the local rules and policies of the office].
+(f) A private child custody evaluator shall retain all
+records relating to a child custody evaluation conducted by the
+evaluator until the ending date of the retention period adopted by
+the licensing authority that issues the professional license held
+by the evaluator based on the date the evaluator filed the notice
+under Section 107.113(b) [deleted: child custody evaluation report prepared under this section] with the court.
+(i) A child custody evaluator shall redact any social
+security number or child's birth date from records subject to
+disclosure under this section before making the records available.
+SECTION 4. Section 107.114, Family Code, is amended by
+adding Subsection (a-1) to read as follows:
+(a-1) Unless the child custody evaluator is appointed under
+Section 107.106, the court may not admit into evidence a child
+custody evaluation report prepared under Section 107.113 if:
+(1) the child who is the subject of the report has an
+intellectual disability or developmental disability; and
+(2) on the date the evaluation that is the subject of
+the report was made, the child custody evaluator had not satisfied
+the training requirement under Section 107.104(f).
+SECTION 5. Sections 107.104(f) and 107.114(a-1), Family
+Code, as added by this Act, apply only to a child custody evaluation
+that is conducted by a child custody evaluator appointed by a court
+on or after January 1, 2026. A child custody evaluation conducted by
+a child custody evaluator appointed by a court before January 1,
+2026, is governed by the law in effect immediately before the
+effective date of this Act, and the former law is continued in
+effect for that purpose.
+SECTION 6. Sections 107.112(c) and (d), Family Code, as
+amended by this Act, and Section 107.112(i), Family Code, as added
+by this Act, apply to a disclosure of information made on or after
+the effective date of this Act.
+SECTION 7. Section 107.112(f), Family Code, as amended by
+this Act, applies to all records in the possession of a child
+custody evaluator on or after the effective date of this Act,
+regardless of whether the records were created before, on, or after
+that date.
+SECTION 8. This Act takes effect September 1, 2025.
+______________________________
+______________________________
+President of the Senate
+Speaker of the House
+I certify that H.B. No. 2340 was passed by the House on April
+30, 2025, by the following vote: Yeas 140, Nays 0, 1 present, not
+voting.
+______________________________
+Chief Clerk of the House
+I certify that H.B. No. 2340 was passed by the Senate on May
+21, 2025, by the following vote: Yeas 30, Nays 1.
+______________________________
+Secretary of the Senate
+APPROVED: _____________________
+Date
+_____________________
+Governor
