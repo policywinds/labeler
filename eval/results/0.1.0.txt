@@ -1,0 +1,56 @@
+# Eval output for policywinds-labeler 0.1.0 (prompt v9)
+# Run 2026-11-21 (about 14:15 CST) on the released code: python eval/run_eval.py (defaults: anthropic, claude-sonnet-5-5).
+# The model's answers vary a little between runs: an earlier run on the same prompt and model gave 34/43
+# passed and 2 real errors. Acceptance bar: 0-3 real errors. Virginia HB173 is skipped (no text that can be
+# fetched directly; see eval/README.md).
+
+PASS CA SB934 transgender/healthcare want expands ['transgender/healthcare=expands']
+PASS TX HB613 firearms/purchase-background-checks want restricts ['firearms/purchase-background-checks=restricts']
+PASS CA AB1300 immigration-enforcement/state-federal-cooperation want restricts ['immigration-enforcement/state-federal-cooperation=restricts']
+PASS CA AB49 immigration-enforcement/sanctuary-policies want restricts ['immigration-enforcement/sanctuary-policies=restricts']
+PASS CA SB1323 immigration-enforcement/sanctuary-policies want restricts ['immigration-enforcement/other=restricts']
+PASS CA AB18 immigration-enforcement/sanctuary-policies want expands ['immigration-enforcement/sanctuary-policies=expands', 'immigration-enforcement/state-federal-cooperation=expands', 'immigration-enforcement/state-immigration-crimes-border=expands']
+PASS TX SB80 firearms/weapon-accessory-restrictions want restricts ['firearms/purchase-background-checks=restricts', 'firearms/weapon-accessory-restrictions=restricts']
+PASS TX HB712 firearms/carry want restricts ['firearms/preemption-sanctuary=restricts', 'firearms/carry=restricts']
+PASS TX HB377 firearms/carry want expands ['firearms/carry=expands']
+PASS TX HB119 firearms/other want neutral ['firearms/other=neutral']
+PASS TX HB1057 abortion/funding-insurance want expands ['abortion/funding-insurance=expands']
+PASS TX SB193 firearms/carry want expands ['firearms/carry=expands']
+PASS CA SB1422 immigration-enforcement/sanctuary-policies want absent []
+PASS US S2468 immigration-enforcement/other want absent []
+PASS FL S0164 abortion/personhood-ivf want restricts ['abortion/personhood-ivf=restricts']
+PASS US HR1104 custody-support/child-support want restricts ['custody-support/child-support=restricts', 'custody-support/paternity=restricts']
+PASS TX SB942 custody-support/child-support want restricts ['custody-support/child-support=restricts', 'custody-support/paternity=restricts']
+PASS CA AB1978 custody-support/custody-parenting-time want expands ['custody-support/custody-parenting-time=expands']
+PASS FL S0246 custody-support/custody-parenting-time want restricts ['custody-support/custody-parenting-time=restricts']
+PASS TX SB2052 custody-support/custody-parenting-time want expands ['custody-support/custody-parenting-time=expands']
+SKIP VA HB173 custody-support/other no text file: run fetch_texts.py
+PASS TX HB1151 custody-support/other want absent []
+PASS TX SB35 custody-support/custody-parenting-time want expands ['custody-support/custody-parenting-time=expands']
+PASS TX SB1830 custody-support/custody-parenting-time want restricts ['custody-support/custody-parenting-time=restricts']
+FAIL US S1436 firearms/other want neutral []
+PASS TX HB185 custody-support/custody-parenting-time want restricts ['custody-support/custody-parenting-time=restricts']
+FAIL TX HB4942 custody-support/custody-parenting-time want restricts ['custody-support/custody-parenting-time=expands']
+     custody-support/custody-parenting-time expands True | Bars courts from ordering family-violence or abuse-related services or interventions unless evidence-based, which limits court-ordered programs imposed on parents, so fewer obligations for the less-custodial parent.
+FAIL TX HB3783 custody-support/custody-parenting-time want restricts ['custody-support/custody-parenting-time=expands', 'custody-support/domestic-violence-custody=restricts']
+     custody-support/custody-parenting-time expands True | Limits court-ordered counseling that isolates a child, cuts off a parent's contact, or changes possession periods, protecting the less-custodial parent's parenting time, so expands.
+     custody-support/domestic-violence-custody restricts True | Requires courts to weigh family violence evidence before ordering counseling and bars joint sessions or cost-shifting onto victims, which tilts toward the accused parent's obligations, so restricts.
+PASS TX HB185 custody-support/domestic-violence-custody want restricts ['custody-support/custody-parenting-time=restricts']
+FAIL TX HB4942 custody-support/domestic-violence-custody want restricts ['custody-support/custody-parenting-time=expands']
+     custody-support/custody-parenting-time expands True | Bars courts from ordering family-violence or abuse-related services or interventions unless evidence-based, which limits court-ordered programs imposed on parents, so fewer obligations for the less-custodial parent.
+PASS TX HB3783 custody-support/domestic-violence-custody want restricts ['custody-support/custody-parenting-time=expands', 'custody-support/domestic-violence-custody=restricts']
+FAIL NY S08253 custody-support/child-support want neutral []
+FAIL NY S08253 custody-support/alimony want neutral []
+FAIL TX HB2340 custody-support/custody-parenting-time want neutral []
+PASS TX HB126 abortion/bans-gestational-limits want expands ['abortion/bans-gestational-limits=expands', 'abortion/provider-clinic-regulation=expands', 'abortion/exceptions=expands']
+PASS TX HB126 transgender/healthcare want expands ['transgender/healthcare=expands']
+PASS TX HB126 abortion/funding-insurance want expands ['abortion/bans-gestational-limits=expands', 'abortion/provider-clinic-regulation=expands', 'abortion/exceptions=expands']
+PASS TX HB776 firearms/carry want restricts ['firearms/carry=restricts']
+FAIL TX HB244 abortion/funding-insurance want neutral []
+PASS TX HB355 transgender/id-documents want absent []
+FAIL TX HB355 firearms/other want neutral []
+PASS TX SB349 firearms/other want absent []
+PASS TX SB277 firearms/other want absent []
+FAIL TX HB1140 firearms/storage-minors want absent ['firearms/storage-minors=neutral']
+     firearms/storage-minors neutral True | Directs public safe-storage messaging on highway signs; it is an awareness campaign with no new storage mandate or penalty, so no direct change in firearm access.
+anthropic claude-sonnet-5-5, prompt v9: 33/43 passed, 3 real errors, 1 skipped  cost $0.325  avg 2.9s per call

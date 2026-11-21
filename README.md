@@ -67,6 +67,21 @@ PolicyWinds labels with Claude Sonnet 5.5 (`claude-sonnet-5-5`), chosen from a t
 (2026-11-21): it had 2 real errors on 44 checks, at 3.3 seconds a bill. Any model the provider adapters support
 can be compared with `eval/run_eval.py --provider P --model M`.
 
+## Versions
+
+The package version follows semantic versioning, read for labels:
+
+- **Minor** (0.1.0 -> 0.2.0, while the version is 0.x): anything that can change labels. That is the prompt, topics,
+  definitions, keywords, scope exclusions, the answer schema, or the checks on answers.
+- **Patch** (0.1.0 -> 0.1.1): changes that cannot change labels, such as provider adapters, prices, docs or tests.
+
+The prompt has its own number, `policywinds_labeler.label.PROMPT_VERSION`. Every release note names it, and
+`eval/results/` keeps that release's eval output.
+
+| Release | Prompt | Eval (claude-sonnet-5-5) |
+|---|---|---|
+| 0.1.0 | v9 | `eval/results/0.1.0.txt` |
+
 ## Wrong label?
 
 Open an issue with the bill, the tag, the label and what you think it should be, quoting the bill's text.
