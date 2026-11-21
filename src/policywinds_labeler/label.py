@@ -549,7 +549,7 @@ def _watchdog(db, st: dict) -> None:
     stuck = db.execute(
         "select id, provider, model, n_requests, extract(epoch from created_at) as created_epoch, "
         "created_at < now() - interval '1 day' as give_up from llm_batch where status = 'preparing' "
-        "and created_at < now() - make_interval(mins => :m)",
+        "and created_at < now() - :m * interval '1 minute'",
         {"m": PREPARING_TIMEOUT_MIN},
     )
     known = None
@@ -589,8 +589,8 @@ def collect(db, s3, bucket: str, *, time_left, renew=lambda: None) -> dict:
     _watchdog(db, st)
     open_rows = db.execute(
         "select id, provider, model, external_id, status, prompt_version, "
-        "now() > coalesce(expires_at, submitted_at + interval '24 hours') + make_interval(hours => :h) as overdue, "
-        "now() > coalesce(submitted_at, created_at) + make_interval(days => :d) as dead "
+        "now() > coalesce(expires_at, submitted_at + interval '24 hours') + :h * interval '1 hour' as overdue, "
+        "now() > coalesce(submitted_at, created_at) + :d * interval '1 day' as dead "
         "from llm_batch where status in ('submitted', 'ended') order by id",
         {"h": EXPIRY_GRACE_H, "d": FORCE_CLOSE_DAYS},
     )
@@ -680,6 +680,8 @@ TRANSIENT_TRIES = 3  # an item that keeps hitting "transient" errors is given up
 
 
 def _item_failed(db, row: dict, res, sys_sha: str, e: Exception) -> bool:
+    from lawtracker.llm.types import parse_custom_id
+
     """The answer was billed whatever happened next: log its cost on its own. A transient error leaves the item
     pending for the next collect (a batch still open after FORCE_CLOSE_DAYS is closed); a permanent one gives up."""
     try:
@@ -698,7 +700,7 @@ def _item_failed(db, row: dict, res, sys_sha: str, e: Exception) -> bool:
         "update llm_batch_item set status = case when exists (select 1 from classification c "
         "where c.bill_id = :b and c.doc_id = :d and c.prompt_version = :pv) then 'done' else 'failed' end, "
         "result = :r where batch_id = :id and custom_id = :c",
-        {"b": int(res.custom_id[1:].split("d")[0]), "d": int(res.custom_id.split("d")[1].split("v")[0]),
+        {"b": parse_custom_id(res.custom_id)[0], "d": parse_custom_id(res.custom_id)[1],
          "pv": row["prompt_version"], "r": f"error:{type(e).__name__}"[:40], "id": row["id"], "c": res.custom_id},
     )  # fmt: skip
     return False

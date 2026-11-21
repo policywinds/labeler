@@ -8,15 +8,25 @@ from datetime import datetime
 
 from pydantic import BaseModel
 
-CUSTOM_ID = re.compile(r"^b[0-9]{1,12}d[0-9]{1,12}v[0-9]{1,4}$")  # generated from integers only, never from text
+# Generated from integers only, never from text. Text-version ids are negative for texts that do not come from
+# LegiScan (state sites, Congress.gov): "n" stands for the minus sign (b76706dn18619772v9).
+CUSTOM_ID = re.compile(r"^b([0-9]{1,12})d(n?)([0-9]{1,12})v([0-9]{1,4})$")
 STATUSES = ("ok", "refusal", "truncated", "invalid", "error", "expired", "canceled")
 
 
 def custom_id(bill_id: int, doc_id: int, prompt_version: int) -> str:
-    cid = f"b{int(bill_id)}d{int(doc_id)}v{int(prompt_version)}"
+    doc = int(doc_id)
+    cid = f"b{int(bill_id)}d{'n' if doc < 0 else ''}{abs(doc)}v{int(prompt_version)}"
     if not CUSTOM_ID.match(cid):
         raise ValueError("bad custom_id")
     return cid
+
+
+def parse_custom_id(cid: str) -> tuple[int, int, int]:
+    m = CUSTOM_ID.match(cid)
+    if not m:
+        raise ValueError("bad custom_id")
+    return int(m[1]), -int(m[3]) if m[2] else int(m[3]), int(m[4])
 
 
 @dataclass(frozen=True)
