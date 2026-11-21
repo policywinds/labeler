@@ -1,7 +1,8 @@
 """Provider adapters behind one small interface (docs/llm-providers-design.md section 1).
 
-Adapters take LLMRequests and return LLMResults. They never touch the database or S3, never log request or
-response bodies, and read only their own provider's key, lazily. Every answer is validated against the pydantic
+Adapters take LLMRequests and return LLMResults. They never touch a database or storage, never log request or
+response bodies, and read only their own provider's key, lazily, through the `secret` function they are given
+(default: the environment variable XAI_API_KEY, OPENAI_API_KEY or ANTHROPIC_API_KEY). Every answer is validated against the pydantic
 schema here, whatever the provider promised: Anthropic's SDK drops constraints such as max_length from the wire
 schema, so the pydantic check is the contract.
 """
@@ -9,15 +10,23 @@ schema, so the pydantic check is the contract.
 from __future__ import annotations
 
 import json
-from collections.abc import Iterator, Sequence
+import os
+from collections.abc import Callable, Iterator, Sequence
 from datetime import datetime
 from functools import cached_property
 
 from pydantic import ValidationError
 
-from lawtracker import config
-from lawtracker.llm import prices
-from lawtracker.llm.types import CUSTOM_ID, BatchInfo, LLMRequest, LLMResult, Usage
+from policywinds_labeler.llm import prices
+from policywinds_labeler.llm.types import CUSTOM_ID, BatchInfo, LLMRequest, LLMResult, Usage
+
+XAI_BASE_URL = "https://api.x.ai/v1"
+Secret = Callable[[str], str]  # key name ("xai_api_key", "openai_api_key", "anthropic_api_key") -> key
+
+
+def env_secret(name: str) -> str:
+    return os.environ[name.upper()]
+
 
 TIMEOUT_S = 180.0
 # JSON answer plus thinking. Sonnet 5.5 used at most 915 on the 2026-11-21 test; a cut answer is reported as
@@ -38,15 +47,16 @@ class OpenAICompatProvider:
 
     supports_batch = False
 
-    def __init__(self, name: str, key: str, base_url: str | None, thinking_in_completion: bool):
-        self.name, self.key, self.base_url = name, key, base_url
+    def __init__(self, name: str, key: str, base_url: str | None, thinking_in_completion: bool,
+                 secret: Secret = env_secret):  # fmt: skip
+        self.name, self.key, self.base_url, self.secret = name, key, base_url, secret
         self.thinking_in_completion = thinking_in_completion  # OpenAI counts reasoning inside completion_tokens
 
     @cached_property
     def client(self):
         from openai import OpenAI
 
-        return OpenAI(api_key=config.secret(self.key), base_url=self.base_url, timeout=TIMEOUT_S, max_retries=2)
+        return OpenAI(api_key=self.secret(self.key), base_url=self.base_url, timeout=TIMEOUT_S, max_retries=2)
 
     def run_one(self, req: LLMRequest, *, model: str) -> LLMResult:
         from openai.lib._pydantic import to_strict_json_schema
@@ -92,11 +102,14 @@ class AnthropicProvider:
     name = "anthropic"
     supports_batch = True
 
+    def __init__(self, secret: Secret = env_secret):
+        self.secret = secret
+
     @cached_property
     def client(self):
         import anthropic
 
-        return anthropic.Anthropic(api_key=config.secret("anthropic_api_key"), timeout=TIMEOUT_S, max_retries=2)
+        return anthropic.Anthropic(api_key=self.secret("anthropic_api_key"), timeout=TIMEOUT_S, max_retries=2)
 
     @staticmethod
     def params(req: LLMRequest, model: str) -> dict:
@@ -183,16 +196,16 @@ class AnthropicProvider:
 
 
 _PROVIDERS = {
-    "xai": lambda: OpenAICompatProvider("xai", "xai_api_key", config.XAI_BASE_URL, thinking_in_completion=False),
-    "openai": lambda: OpenAICompatProvider("openai", "openai_api_key", None, thinking_in_completion=True),
-    "anthropic": AnthropicProvider,
+    "xai": lambda s: OpenAICompatProvider("xai", "xai_api_key", XAI_BASE_URL, thinking_in_completion=False, secret=s),
+    "openai": lambda s: OpenAICompatProvider("openai", "openai_api_key", None, thinking_in_completion=True, secret=s),
+    "anthropic": lambda s: AnthropicProvider(secret=s),
 }
 
 
-def get_provider(name: str):
+def get_provider(name: str, secret: Secret = env_secret):
     if name not in _PROVIDERS:
         raise KeyError(f"unknown LLM provider {name!r}")
-    return _PROVIDERS[name]()
+    return _PROVIDERS[name](secret)
 
 
 def describe(res: LLMResult) -> str:

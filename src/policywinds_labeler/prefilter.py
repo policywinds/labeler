@@ -1,11 +1,13 @@
 """Free keyword prefilter over title + description. Tuned for recall; ranks candidates per topic.
-Bills whose title hides the subject are caught by the full-text scan (textscan.py), which sets text_prefilter."""
+
+`score` decides which bills a model ever reads; `windows` cuts the parts of a bill's text it is shown. Bills whose
+title hides the subject are caught by a full-text keyword scan in the pipeline."""
 
 from __future__ import annotations
 
 import re
 
-from lawtracker.topics import KEYWORD_EXCLUDE, KEYWORDS
+from policywinds_labeler.topics import KEYWORD_EXCLUDE, KEYWORDS
 
 VERSION = 7  # v2: FL H/S numbering; v3: "conception", "conceived"; v4: custody-support; v5-7: KEYWORD_EXCLUDE
 # Bills and joint resolutions (constitutional amendments). Simple/concurrent resolutions are mostly ceremonial.
@@ -74,23 +76,3 @@ def windows(text: str, radius: int = 1500, max_chars: int = 24000) -> str:
         out.append(chunk)
         total += len(chunk)
     return "\n[...]\n".join(out)
-
-
-def run(db) -> dict:
-    """(Re)score bills whose prefilter_version is stale. Candidate = bill type matches and any topic scores."""
-    rows = list(
-        db.paged(
-            "select id, state, number, title, description, text_prefilter from bill "
-            "where (prefilter_version is distinct from :v) and id > :_after order by id limit :_limit",
-            {"v": VERSION},
-            page_size=1000,
-        )
-    )
-    updates = []
-    for r in rows:
-        sc = score(f"{r['title']} {r.get('description') or ''}")
-        types = STATE_TYPES.get(r["state"], BILL_TYPES)
-        cand = bool(sc or r.get("text_prefilter")) and bool(types.match(r["number"]))  # text scan: textscan.py
-        updates.append({"id": r["id"], "c": cand, "p": sc or None, "v": VERSION})
-    db.executemany("update bill set is_candidate = :c, prefilter = :p, prefilter_version = :v where id = :id", updates)
-    return {"scored": len(rows), "candidates": sum(u["c"] for u in updates)}

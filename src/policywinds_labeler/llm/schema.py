@@ -6,11 +6,11 @@ from enum import Enum, StrEnum
 
 from pydantic import BaseModel, ConfigDict, Field
 
-from lawtracker.topics import all_tags
+from policywinds_labeler.topics import all_tags
 
 
 class Direction(StrEnum):
-    """Effect of the tagged provisions on the topic's axis (lawtracker.topics.DIRECTION_AXES)."""
+    """Effect of the tagged provisions on the topic's axis (policywinds_labeler.topics.DIRECTION_AXES)."""
 
     EXPANDS = "expands"
     RESTRICTS = "restricts"

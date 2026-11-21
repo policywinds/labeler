@@ -7,7 +7,7 @@ the OpenAI-compatible providers cache automatically and bill writes as plain inp
 
 from __future__ import annotations
 
-from lawtracker.llm.types import Usage
+from policywinds_labeler.llm.types import Usage
 
 PRICES: dict[tuple[str, str], dict] = {
     # docs.x.ai model list, checked 2026-11-21. xAI batch discount not verified: 1.0.
