@@ -7,7 +7,8 @@ For each bill a language model reads, the labeler returns which topics the bill 
 **which way the bill moves that topic's fixed measure**: `expands`, `restricts`, `mixed` or `neutral`. Every
 answer comes with a short quote from the bill, and the quote is checked against the bill's text.
 
-Labels are produced by AI. The site's owner reviews them, and a review always overrides the model.
+Labels are produced by AI. The site's owner reviews labels, and a review always overrides the model; labels
+that have not been reviewed are marked as AI labels on the site.
 
 ## The measures
 
@@ -32,11 +33,12 @@ A bill that requires more background checks therefore *restricts* firearms; a bi
 | `topics` | Topics, subtags, definitions, keywords, scope exclusions and the measure of each topic |
 | `prefilter` | Keyword filter on the title (which bills a model reads) and the text windows it is shown |
 | `text` | Plain text from official HTML, XML or PDF; struck-out law is kept and marked `[deleted: ...]` |
-| `label` | The prompt, the request message and the checks on every answer: quotes must appear in the text, a topic needs its keywords in the title, duplicate tags are merged, stray foreign-script text is retried |
+| `label` | The prompt, the request message and the checks on every answer: quotes must appear in the text, custody labels need the topic's keywords in the title, duplicate tags are merged, stray foreign-script text is retried |
 | `llm` | Answer schema, provider adapters (Anthropic, OpenAI, xAI), prices |
 
-The model never decides alone what counts: an answer whose quote is not in the bill is marked unverified, and a
-topic whose keywords are not in the bill's title or description is dropped.
+The model never decides alone what counts: an answer whose quote is not in the bill is marked unverified, and for
+topics that need it (`REQUIRES_KEYWORD`: custody and support), a label is dropped when the topic's keywords are not
+in the bill's title or description.
 
 ## Use it
 
@@ -59,6 +61,12 @@ Keys are read from `ANTHROPIC_API_KEY`, `OPENAI_API_KEY` or `XAI_API_KEY`, or fr
 `eval/` holds checks with known answers on real bills, the official texts, and the harness. See
 `eval/README.md`. Any change to the prompt, keywords or model must run it first.
 
+## How the model was chosen
+
+PolicyWinds labels with Claude Sonnet 5.5 (`claude-sonnet-5-5`), chosen from a test of 13 models on the eval set
+(2026-11-21): it had 2 real errors on 44 checks, at 3.3 seconds a bill. Any model the provider adapters support
+can be compared with `eval/run_eval.py --provider P --model M`.
+
 ## Wrong label?
 
 Open an issue with the bill, the tag, the label and what you think it should be, quoting the bill's text.
@@ -66,5 +74,5 @@ Confirmed cases become new eval checks.
 
 ## License
 
-Code: Apache-2.0 (`LICENSE`). Eval checks and documentation: CC BY 4.0 (`eval/LICENSE`).
+Code: Apache-2.0 (`LICENSE`). Eval checks: CC BY 4.0 (`eval/LICENSE`).
 Copyright 2026 Kernelcraft LLC, which publishes PolicyWinds.

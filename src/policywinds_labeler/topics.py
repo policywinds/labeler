@@ -259,7 +259,7 @@ KEYWORD_EXCLUDE: dict[str, list[str]] = {
         r"gender[- ]affirming",  # covered by the transgender topic
     ],
 }
-# Topics whose labels count only for bills that matched the topic's keywords (precision guard; see classify).
+# Topics whose labels count only for bills that matched the topic's keywords (precision guard; label.keyword_guard).
 REQUIRES_KEYWORD = {"custody-support"}
 
 
