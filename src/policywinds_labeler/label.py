@@ -151,13 +151,50 @@ def verify_quotes(topics: list[dict], full_text: str) -> list[dict]:
     # It also merges neighbouring strike-outs into one "[deleted: ...]": accept the text with the deletion
     # markers removed (deleted words kept), compared with the quote's markers removed the same way.
     hays = (flat(full_text), flat(_deleted.sub(" ", full_text)), flat(_unmark(full_text)))
+    # Short citation quotes ("(2) Section 311.036, Government Code;") lose their numbers in norm() and fall under
+    # the length floor. Also accept the quote with every number kept, matched exactly: stricter than the main
+    # check (311.036 does not match 311.035), so it cannot pass a quote the text does not contain.
+    exact = (_exact(full_text), _exact(_unmark(full_text)))
     for t in topics:
         quote = t.get("quote") or ""
         q = norm(quote)
         ok = len(q.split()) >= 4 and len(q.replace(" ", "")) >= 20
-        t["quote_ok"] = ok and (any(q.replace(" ", "") in h for h in hays) or flat(_unmark(quote)) in hays[2]
-                                or _list_item_ok(quote, full_text))  # fmt: skip
+        e = _exact(quote)
+        ok_exact = len(_non_word.sub(" ", quote.lower()).split()) >= 4 and len(e) >= 20
+        t["quote_ok"] = (ok and (any(q.replace(" ", "") in h for h in hays) or flat(_unmark(quote)) in hays[2]
+                                 or _list_item_ok(quote, full_text))
+                         or ok_exact and any(e in h for h in exact)
+                         or _ellipsis_ok(quote, hays))  # fmt: skip
     return topics
+
+
+_ellipsis = re.compile(r"\s*(?:\.\.\.|…)\s*")
+
+
+def _ellipsis_ok(quote: str, hays: tuple[str, ...]) -> bool:
+    """A quote that joins passages with "..." passes if every piece is long enough to count on its own and the
+    pieces appear in the text in order."""
+    parts = [p for p in _ellipsis.split(quote) if p.strip()]
+    if len(parts) < 2:
+        return False
+    flats = [norm(p).replace(" ", "") for p in parts]
+    if any(len(norm(p).split()) < 4 or len(f) < 20 for p, f in zip(parts, flats, strict=True)):
+        return False
+    for h in hays:
+        pos = 0
+        for f in flats:
+            pos = h.find(f, pos)
+            if pos < 0:
+                break
+            pos += len(f)
+        else:
+            return True
+    return False
+
+
+def _exact(s: str) -> str:
+    """Letters and digits only, numbers kept: for matching short statute citations exactly."""
+    return _non_word.sub("", s.lower())
 
 
 def _unmark(s: str) -> str:

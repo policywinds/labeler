@@ -1,6 +1,6 @@
 [project]
 name = "policywinds-labeler"
-version = "0.2.0"
+version = "0.3.0"
 description = "Labels US bills by policy topic and by which way they move each topic's fixed measure, with checked quotes"
 readme = "README.md"
 license = "Apache-2.0"

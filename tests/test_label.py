@@ -91,3 +91,40 @@ def test_quote_check_accepts_list_heading_with_one_item_and_merged_strikeouts():
 
 def test_system_prompt_is_byte_stable():
     assert label.system_prompt() == label.system_prompt()
+
+
+def test_short_citation_quotes_match_with_their_numbers():
+    # TX HB 948 and HB 126 (2027): repeal-list items whose words are mostly section numbers
+    text = (
+        "SECTION 9. The following provisions are repealed: (1) Section 30.022, Civil Practice and Remedies Code; "
+        "(2) Section 311.036, Government Code; (3) Chapter 170A, Health and Safety Code; (4) Chapter 33, Family Code;"
+    )
+
+    def ok(q):
+        return label.verify_quotes([{"quote": q}], text)[0]["quote_ok"]
+
+    assert ok("(2) Section 311.036, Government Code;")
+    assert ok("(4) Chapter 33, Family Code;")
+    assert not ok("(2) Section 311.035, Government Code;")  # a different section must not pass
+    assert not ok("(5) Chapter 33, Family Code;")  # nor a different list number
+    assert not ok("Chapter 33")  # still too short to count
+
+
+def test_quotes_joined_with_an_ellipsis_need_every_piece_in_order():
+    text = (
+        "Section 3. Section 286.311, Florida Statutes, is repealed. Section 4. Section 409.908 is amended. "
+        "Reimbursement.—The agency shall provide reimbursement to providers for covered services."
+    )
+
+    def ok(q):
+        return label.verify_quotes([{"quote": q}], text)[0]["quote_ok"]
+
+    assert ok("Section 286.311, Florida Statutes, is repealed. ... The agency shall provide reimbursement to providers")
+    assert ok("Section 286.311, Florida Statutes, is repealed… The agency shall provide reimbursement to providers")
+    assert not ok(
+        "The agency shall provide reimbursement to providers ... Section 286.311, Florida Statutes, is repealed."
+    )
+    assert not ok(
+        "Section 286.311, Florida Statutes, is repealed. ... The agency shall deny reimbursement to providers"
+    )
+    assert not ok("Section 286.311, Florida Statutes, is repealed. ... covered services")  # piece too short

@@ -82,6 +82,7 @@ The prompt has its own number, `policywinds_labeler.label.PROMPT_VERSION`. Every
 |---|---|---|
 | 0.1.0 | v9 | `eval/results/0.1.0.txt` |
 | 0.2.0 | v10 | `eval/results/0.2.0.txt` |
+| 0.3.0 | v10 | same as 0.2.0: only the quote check changed (short citation quotes and quotes joined with "..." can now pass), not the labels |
 
 ## Wrong label?
 
